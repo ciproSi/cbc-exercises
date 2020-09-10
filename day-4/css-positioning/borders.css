@@ -12,6 +12,13 @@ body {
 
 
 
-.one {
-    
+.borders-one {
+    border: 4px dotted green;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    /* box-shadow: rgb(red, green, blue); */
+    text-align: center;
+    line-height: 200PX;
 }
+

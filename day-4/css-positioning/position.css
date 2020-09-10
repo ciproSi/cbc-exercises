@@ -1,0 +1,48 @@
+* {
+    box-sizing: content-box;
+}
+
+html {
+    background: transparent url('background-grid.png') left top repeat scroll;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+} 
+
+.one {
+    border: 2px solid blue;
+    width: 100px;
+    height: 100px;
+    position: relative; 
+            /* relative position preserves original position of element withing the document flow   */
+    /* top: 100px; */
+    z-index: 1;
+    /* z-index is basically a layer number, the higher number the more forward is the element */
+}
+
+.two {
+
+}
+
+.three {
+    border: 2px solid rgba(255, 166, 0, 0.5);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(184, 134, 41, 1);
+    top: 0px;
+    left: 0px;
+    position: absolute; 
+    /* absolute positio removes the element position from the document flow, it's always positon the element absolutly  to its ancestor*/
+    z-index: 10;
+}
+
+.four {
+    border: 2px solid rgba(89, 0, 255, 1);
+    width: 100px;
+    height: 100px;
+    background-color: rgba(96, 41, 184, 1);
+    position: fixed;
+    top: 0;
+}
