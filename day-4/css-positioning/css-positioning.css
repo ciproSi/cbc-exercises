@@ -1,0 +1,56 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: transparent url('background-grid.png') left top repeat scroll;
+    font-size: 15px;
+    
+}
+
+body {
+    margin: 0;
+    height: 500px;
+}
+.one {
+    box-sizing: border-box;
+    border: 2px solid blue;
+    height: 100px;
+    width: 100px;
+}
+
+.two {
+    box-sizing: border-box;
+    border: 2px solid green;
+     height: 50%;
+    width: 50%;
+}
+
+.three {
+    box-sizing: border-box;
+    border: 2px solid red;
+    font-size: 10px;
+    height: 10em;
+    width: 10rem;
+}
+
+.four {
+    box-sizing: border-box;
+    border: 2px solid orange;
+    font-size: 10px;
+    height: 25vh;
+    width: 50vw;
+    /* margin-left: 10vw; */
+}
+
+.five {
+    border: 2px solid purple;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    box-sizing: border-box;
+    /* display: none; */
+    /* visibility: hidden; */
+
+}
