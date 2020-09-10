@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 14px "Roboto", sans-serif; 
+}
+
+nav {
+    font-size: 1.5em;
+    /* background-color: orange; */
+    text-align: center;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.banner {
+    background-image: url('../graphics/banner.jpg');
+    background-size: cover;
+    background-position: center top;
+    height: 25em;
+}
+
+.container h1 {
+    
+}
