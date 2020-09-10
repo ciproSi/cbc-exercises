@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'SummerLove';
+    src: url('SummerLoveRegular.eot');
+    src: url('SummerLoveRegular.eot?#iefix') format('embedded-opentype'),
+        url('SummerLoveRegular.woff2') format('woff2'),
+        url('SummerLoveRegular.woff') format('woff'),
+        url('SummerLoveRegular.ttf') format('truetype'),
+        url('SummerLoveRegular.svg#SummerLoveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

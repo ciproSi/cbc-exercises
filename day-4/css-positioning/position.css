@@ -9,6 +9,7 @@ html {
 body {
     margin: 0;
     padding: 20px;
+    
 } 
 
 .one {
@@ -36,6 +37,7 @@ body {
     position: absolute; 
     /* absolute positio removes the element position from the document flow, it's always positon the element absolutly  to its ancestor*/
     z-index: 10;
+    font-family: "SummerLove";
 }
 
 .four {
@@ -46,3 +48,36 @@ body {
     position: fixed;
     top: 0;
 }
+
+
+.five {
+    border: 2px;
+    border-color: orange;
+    border-style: solid;
+    width: 100px;
+    height: 100px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#1e5799+0,7db9e8+100&1+0,0+100;Blue+to+Transparent */
+    background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); Chrome10-25,Safari5.1-6
+    background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 ); /* IE6-9 */
+}
+
+.six {
+    border: 2px solid rgba(89, 0, 255, 1);
+    
+    /* background-image: url(background-image.jpg);
+    background-size: cover; 
+    background-size: contain;
+    auto calculation of second dimension when one is set up
+    background-size: auto 200px;
+    width: 400px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;  */
+    zkusit shorthand
+    background: orange url('background-image.jpg') center center/ 100px auto no-repeat;
+    
+}
+
