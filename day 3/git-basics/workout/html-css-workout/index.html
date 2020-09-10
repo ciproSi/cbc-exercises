@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="new-styles.css">
+    <title>The Lord of the Rings</title>
+
+</head>
+<body>
+
+    <main class="movie">
+
+        <div class="image">
+            <img src="img/lord-poster.jpg" alt="The Lord of the Rings poster">
+        </div>
+
+        <div class="description">
+
+            <h1>Epic saga</h1>
+
+            <div class="year">2001 - 2003</div>
+
+            <h2>Directed by:</h2>
+
+            <ul>
+                <li>Peter Jackson</li>
+            </ul>
+
+            <h2>Cast:</h2>
+
+            <ul>
+              <li>Elijah Wood</li>
+              <li>Liv Tyler</li>
+              <li>Vigo Mortenssen</li>
+            </ul>
+
+            <div class="score" data-value=""></div>
+
+        </div>
+
+    </main>
+
+    <script>
+        let score = document.querySelector('.movie .score'),
+            stars = document.createElement('div'),
+            number = document.createElement('div'),
+            value = score.getAttribute('data-value');
+
+        for (let i = 0; i < 10; i++) {
+            stars.innerHTML += `<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAWQAAAFkBqp2phgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFTSURBVDiNlZI/S0JhFMZ/50XvvVHklEUEtho15SCBguBUUzQ4C0HfwaEp8Cv4HWpuadDr5NIgUY1BVKhQ0nCJvHRPQxrX8u/Zznmf53l/L+eFCaU1p6g1pzhJI2PN9aUV1H8EBD+SkLzXHqUz46/vnQAOYBP1j+ci0CoRjP0AbPRHLyx+bkoKfzYCYx2FzADreNbhSAJ17X1U0hhdQ1kFjYMkgdgf7TvoPUgHoU0gLUQboq7dBuLj3jilOoZACiDd+b3SJZCCAGjd2gK5REnM6H7GBAeS8ZsGQLK9O74iaZDrGcw3BCYtGb8JoS1Izmshwdl0cj2V3MfToB1eYyB7UwPUpMPtcIAwPQAd0vwG6C0WsBs68xAtIVoCvNA81df+IXiL7vDz90HkHExSsr2yZHtlMEmUi75ygdfo9n+wK2Lq2hWtOvmx8FUnr65d0QbLg9k3QflombXow/oAAAAASUVORK5CYII=" />`;
+        }
+
+        stars.classList.add('stars');
+        stars.style.width = (value * 10) + '%';
+
+        number.innerHTML = value;
+
+        score.appendChild(stars);
+        score.appendChild(number);
+    </script>
+    
+</body>
+</html>

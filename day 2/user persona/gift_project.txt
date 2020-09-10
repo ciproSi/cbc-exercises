@@ -1,0 +1,8 @@
+Persona 1: Male, looking for a gift for a wife for a birthday he forgot about.
+Persona 2: 
+
+User story 1: arrive at the site from Google search -> needs some gift ideas based on the basic criterias like age, sex and interest of the person to be given to. Needs to filter results based on price range or at least from cheapest. Put in the cart. Order gift packaging. Pay fast (card, direct payment method). Get it delivered fast.
+
+feedback: choose a gift packaging in cart
+
+

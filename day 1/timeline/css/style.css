@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: auto;
+    
+
+    
+  }
+
+
+body {
+    width: 80%;
+    display: inline;
+    margin: 0px;
+    text-align: center;
+    padding: 100px  0 10px 0;
+}
+header {
+    background-color: #63AEE6;
+    
+    
+}
+
+img {
+    width: 500px;
+    opacity: 0.8;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+main {
+    background-color: #87CBFF;
+    
+}
+
+footer {
+    background-color: #326D99;
+    
+}
+
+li {
+    margin: 0 10% 0 10%;
+}

@@ -1,0 +1,58 @@
+html {
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: white;
+}
+h1 {
+  color: #23226C;
+  font-weight: 900;
+  font-size: 240%;
+  text-align: center;
+}
+
+p {
+  color: #555555;
+  line-height: 150%;
+  text-align: justify;  
+}
+
+h2 {
+  color: #23226C;
+  font-weight: 900;
+  font-size: 180%;
+
+}
+article {
+  width: 50rem;
+  margin: 0 auto;
+}
+
+section {
+  padding: 0.5rem 2rem;
+}
+
+strong {
+  color: black;
+
+}
+
+em {
+  color: #23226C;
+  text-decoration: none;
+}
+
+a{
+  color: #6290C3;
+
+}
+
+.intro {
+  background-color: #D2D6EF;
+}
+
+.conclusion {
+  background-color: #D2D6EF;
+}

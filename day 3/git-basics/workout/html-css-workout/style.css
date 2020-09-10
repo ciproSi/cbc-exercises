@@ -1,0 +1,41 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie {
+    max-width: 500;
+    display: flex;
+    padding: 2em;
+    border: 1px solid gray;
+}
+
+.image {
+    margin-right: 2em;
+}
+
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+h1 {
+    color: cadetblue;
+}
+
+.score {
+    width: 160px;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.score .stars {
+    display: flex;
+    overflow: hidden;
+}
+
+.score .stars img {
+    flex-shrink: 0;
+}
