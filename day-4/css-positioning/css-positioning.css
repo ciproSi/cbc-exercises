@@ -11,7 +11,7 @@ html {
 
 body {
     margin: 0;
-    height: 500px;
+    /* height: 500px; */
 }
 .one {
     box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
 .two {
     box-sizing: border-box;
     border: 2px solid green;
-     height: 50%;
+    height: 50%;
     width: 50%;
 }
 
@@ -50,7 +50,42 @@ body {
     height: 100px;
     display: inline-block;
     box-sizing: border-box;
+    
     /* display: none; */
     /* visibility: hidden; */
 
+}
+
+.six {
+    border: 2px solid red;
+    width: 100px;
+    height: 100px;
+    /* overflow: hidden; */
+}
+
+.six-content {
+    border: 2px solid red;
+    background-color: royalblue;
+    width: 200px;
+    height: 200px;
+    /* overflow: hidden; */
+}
+
+
+
+.seven {
+    border: 4px solid yellow;
+    background-color: violet;
+    width: 200px;
+    height: 200px;
+    padding: 1em;
+    /* overflow: hidden; */
+    /* margin: 1em; */
+}
+
+.seven-content {
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    margin:auto;
 }

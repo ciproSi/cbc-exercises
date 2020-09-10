@@ -1,0 +1,17 @@
+* {
+    box-sizing: content-box;
+}
+
+html {
+    background: transparent url('background-grid.png') left top repeat scroll;
+}
+
+body {
+    margin: 0;
+}
+
+
+
+.one {
+    
+}
