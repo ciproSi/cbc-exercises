@@ -1,0 +1,69 @@
+ * {
+     box-sizing: border-box;
+ }
+
+ body
+  {
+      margin: 0;
+  }
+
+  .container {
+      width: 60%;
+      margin: 0 auto;
+      text-align: right;
+      color:white;
+      font-family: "Chilanka", sans-serif;
+      padding-left: 3em;
+      
+  }
+  .heading {
+    
+    /* padding-top: 2em; */
+    padding: 2em 0 0 0;
+    height: 70vh;
+    background-color: #E36DF7;
+    border-bottom-left-radius: 70%;
+    /* border-bottom-right-radius: 50%; */
+    
+  }
+
+  img {
+      width: 400px;
+      border-radius: 50%;
+  }
+
+  .brother {
+    display: inline-block;
+    /* border-radius: 50%;   */
+    margin: O;
+    /* border-top-left-radius: 0; */
+    /* border-bottom-left-radius: 0; */
+    /* border-top-left-radius: 40%; */
+    /* border-bottom-left-radius: 40%; */
+    height: 60vh;
+    width: 40vw;
+    background-image: url("silvestr.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    
+    position: fixed;
+    /* padding: 0; */
+
+  }
+
+  h1 {
+      font-size: 3em;
+  }
+
+  p {
+      font-size: 1.5em;
+  }
+
+  button {
+      font-family: "Chilanka";
+      background-color: #F7643B;
+      border: 0;
+      width: 200px;
+      height: 50px;
+  }
