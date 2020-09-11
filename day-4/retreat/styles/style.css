@@ -8,6 +8,8 @@ html {
 
 body {
     background: url("../img/bg.jpg") center/100% auto repeat fixed;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
 }
 
 .container {
@@ -35,8 +37,18 @@ h1{
     color: white;
 }
 
+h2 {
+    margin: 0;
+}
+
 .heading {
-    height: 50vh;
+    height: 60vh;
+}
+
+.heading p {
+    color: white;
+    font-weight: bold;
+    /* padding-bottom: 50em; */
 }
 
 .circle-right {
@@ -50,6 +62,11 @@ h1{
     /* bottom: 100px; */
 }
 
+a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
 
 .circle h3 {
     padding-top: 10rem;
@@ -60,5 +77,13 @@ h1{
 .circle p {
     padding: 0 2em 0 2em;
     margin: 0;
+}
+
+.footer {
+    background-color: #2D4823;
+    height: 25em;
+    text-align: center;
+    color: white;
+    padding-top: 2em;
 }
 
