@@ -17,6 +17,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     
 }
 
@@ -34,6 +35,7 @@ main,
 
 .article {
     flex-grow: 1;
+    align-items: center;
 }
 
 

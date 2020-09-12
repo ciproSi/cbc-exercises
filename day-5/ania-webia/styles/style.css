@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #232323;
+}
+
+a {
+    font-family: "Alegreya Sans", sans-serif ;
+}
+
+.page {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    /* align-content: stretch ; */
+    
+}
+
+.logo {
+    background-color: white;
+    
+    height: 2.5em;
+    flex-grow: 1;
+}
+
+header a {
+    flex-grow: 2;
+    color: lightgrey;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    
+    background-color: rgb(77, 77, 77);
+    
+}
+
+header a:hover {
+    background-color: #54be90;
+}
+.white-spacer {
+    background-color: white;
+    height: 5em;
+}
+
+/* 
+
+Design of edge
+.box {
+    background-color: white;
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    position: relative;
+    top: -5vh;
+}
+
+.white {
+    height: 25vh;
+    background-color: white;
+}
+
+.grey {
+    height: 25vh;
+    background-color: black;
+    
+}
+
+.circles {
+    height: 10vh;
+    overflow: hidden;
+
+} */
+
+
