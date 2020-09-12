@@ -106,7 +106,6 @@ h3 {
     background-color: rgb(54, 53, 53);
     justify-content: space-around;
     height: 20em;
-    padding: 0 5em 0 5em;
 
 }
 
@@ -145,37 +144,27 @@ h3 {
 
 .skills {
     background-color: white;
-    height: 35em;
+    height: 10em;
     align-items: center;
-    padding: 3em 0 0 0;
 }
 
-.skills h1 {
-    color: #54be90;
-    margin-bottom: .5em;
-}
 .progress {
-    height: 2.6em;
+    height: 2em;
     width: 80%;
     align-items: stretch;
-    margin: 0.5em 0;
 }
 
 .skill {
-    background-color: rgb(77, 77, 77);
+    background-color: black;
     color: white;
-    width: 10%;
-    text-align: center;
-    font-weight: bold;
+    width: 25%;
 }
 
 .skill-progress {
-    background-color: lightgrey;
-    width: 90%;
+    background-color: orange;
+    width: 75%;
 }
 
 .skill-value {
-    background-color: #54be90;
-    font-weight: bold;
-    text-align: right
+    background-color: white;
 }
