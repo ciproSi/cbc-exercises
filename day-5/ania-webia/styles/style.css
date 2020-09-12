@@ -5,14 +5,29 @@
 body {
     margin: 0;
     background-color: #232323;
+    font-family: "Alegreya Sans", sans-serif ;
+    font-weight: 300;
 }
 
-a {
-    font-family: "Alegreya Sans", sans-serif ;
+h1,
+h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3em;
+
+
+}
+
+h2 {
+    font-size: 2em;
 }
 
 .page {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -31,7 +46,6 @@ a {
 
 .logo {
     background-color: white;
-    
     height: 2.5em;
     flex-grow: 1;
 }
@@ -42,7 +56,7 @@ header a {
     text-decoration: none;
     text-align: center;
     font-size: 1.2em;
-    
+    padding-top: 0.5em;
     background-color: rgb(77, 77, 77);
     
 }
@@ -55,33 +69,78 @@ header a:hover {
     height: 5em;
 }
 
-/* 
-
-Design of edge
-.box {
-    background-color: white;
-    border-radius: 50%;
-    width: 10vh;
-    height: 10vh;
-    position: relative;
-    top: -5vh;
-}
-
-.white {
-    height: 25vh;
-    background-color: white;
-}
-
-.grey {
-    height: 25vh;
-    background-color: black;
+.hero {
+    background-image: url("../img/canyon.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color:  rgba(0, 0, 0, 0.4);
+    height: 80vh;
+    overflow: hidden;
+    justify-content: center;
     
 }
 
-.circles {
-    height: 10vh;
-    overflow: hidden;
+.name {
+    text-decoration: underline;
+    color: #54be90;
+}
 
-} */
+.claim {
+    justify-content: center;
+    height: 10em;
+    background-color: white;
+    padding: 0 10em 0 10em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+    
+
+}
+
+.project-stages {
+    background-color: rgb(54, 53, 53);
+    justify-content: space-around;
+    height: 20em;
+
+}
+
+.box-row {
+    height: 4em;
+    background-color: rgb(54, 53, 53);
+    overflow: hidden;
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    position: relative;
+    bottom: 4em;
+}
+
+.stage {
+    justify-items: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 4em 0 4em;
+}
+
+.stage h3 {
+    color: #54be90;
+    font-weight: 400;
+    text-align: center;
+}
+
+.stage p {
+    text-align: center;
+    color: white;
+}
+
 
 
