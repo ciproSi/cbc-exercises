@@ -1,0 +1,21 @@
+
+
+//import jiných souborů
+
+@import 'variables.scss';
+
+
+
+body {
+    background-color: $def_bg_color; //inline comment - to umožňuje sass
+}
+
+//comments in scss will not appear in production version - you can write that you hate users
+
+h1 {
+  color: $def_text_color;
+}
+
+
+
+

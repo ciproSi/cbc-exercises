@@ -1,0 +1,79 @@
+
+//color pallete
+//$primary_color: rgb(129, 129, 129);
+$secondary_color: rgb(207, 207, 207);
+$bg_color: rgb(129, 129, 129);
+$content_max_width: 800px;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    justify-items: flex-end;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 100%;
+    background-color: $bg_color;
+
+    a {
+        color:white;
+        padding: .5em 2em .5em 2em;
+        text-decoration: none;
+        
+        &:hover {
+            background-color: $secondary_color;
+        }
+    }
+}
+
+section {
+    background-color: $bg_color;
+    > div {
+        max-width: $content_max_width;
+        margin: 0 auto;
+    }
+
+}
+
+.welcome {
+    background-image: url(/img/welcome.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h1 {
+        &:nth-of-type(1) {
+            color: white;
+            font-size: 3em;
+
+        }
+        &:nth-of-type(2) {
+            color: $secondary_color;
+            font-size: 2em;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.plot-content {
+    display: flex;
+}
