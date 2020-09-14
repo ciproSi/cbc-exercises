@@ -40,20 +40,23 @@ main {
 }   
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
+    /* tohle taky nemusí být flexbox container - protože tam je přirozený vertikální flow */
+    /* display: flex;
+    flex-direction: column; */
     background-color: rgb(226, 94, 5);
-    align-items: flex-start;
-    justify-items: flex-start;
+    /* align-items: flex-start;
+    justify-items: flex-start; */
     padding: 2em;
     color: white;
     width: 40%;
 }
 
 .article {
-    display: flex;
+    
+    /* tohle totiž nemusí být flexbox container */
+    /* display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; */
     background-color: white;
     padding: 2em 4em 2em 4em;
 }
@@ -81,6 +84,7 @@ p {
 
 .article h1 {
     color: rgb(70, 70, 70);
+    border-bottom: 4px solid #444444;
 }
 
 h1 {

@@ -17,7 +17,18 @@ h2 {
 }
 
 .top-menu {
+    justify-items: center;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    background-color: rgb(77, 77, 77);
     /* position: fixed; */
+
+}
+
+.top-menu nav {
+    flex-grow: 1;
 }
 
 h1 {
@@ -51,24 +62,25 @@ h2 {
 .logo {
     background-color: white;
     height: 2.5em;
-    flex-grow: 1;
+    flex-grow: 0;
 }
 
-header a {
+/* header a {
     flex-grow: 2;
     color: lightgrey;
     text-decoration: none;
     text-align: center;
     font-size: 1.2em;
     padding-top: 0.5em;
-    /* margin: auto; */
+    margin: auto;
     background-color: rgb(77, 77, 77);
     
-}
+} */
 
-header a:hover {
+/* header a:hover {
     background-color: #54be90;
-}
+} */
+
 .white-spacer {
     background-color: white;
     height: 5em;
