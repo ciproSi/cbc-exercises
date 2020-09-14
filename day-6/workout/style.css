@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    align-items: center;
+    /* min-height: 100vh; */
+}
+
+.container {
+    width: 70%;
+    padding: 0.5em;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    background-color: rgb(70, 70, 70);
+    /* height: 20%; */
+    align-content: center;
+    align-items: center;
+    padding: 2em;
+        
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}   
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 94, 5);
+    align-items: flex-start;
+    justify-items: flex-start;
+    padding: 2em;
+    color: white;
+    width: 40%;
+}
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    padding: 2em 4em 2em 4em;
+}
+
+hr {
+    border-color: darkgray;
+    width: 100%;
+
+}
+
+footer {
+    display: flex;
+    background-color: lightgrey;
+    /* height: 20vh; */
+    align-content: center;
+    align-items: center;
+    justify-items: flex-start;
+    padding: 2em;
+}
+
+p {
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.article h1 {
+    color: rgb(70, 70, 70);
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+}
