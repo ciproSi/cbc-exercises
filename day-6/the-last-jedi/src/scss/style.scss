@@ -1,10 +1,17 @@
 
 //color pallete
 //$primary_color: rgb(129, 129, 129);
-$secondary_color: rgb(207, 207, 207);
-$bg_color: rgb(129, 129, 129);
+$secondary_color: rgb(148, 148, 148);
+$tertiary_color:rgb(82, 82, 82);
+$bg_color: rgb(190, 190, 190);
 $content_max_width: 800px;
 
+@import 'fontello.scss';
+
+@mixin img-size ($size) {
+    width: $size;
+    height: $size;
+}
 
 * {
     box-sizing: border-box;
@@ -24,7 +31,7 @@ nav {
     justify-content: flex-start;
     align-self: flex-start;
     width: 100%;
-    background-color: $bg_color;
+    background-color: $secondary_color;
 
     a {
         color:white;
@@ -32,16 +39,184 @@ nav {
         text-decoration: none;
         
         &:hover {
-            background-color: $secondary_color;
+            background-color: $tertiary_color;
         }
     }
 }
 
 section {
     background-color: $bg_color;
+    padding: 1em 0;
+    border-bottom: 1px solid rgb(87, 87, 87);
     > div {
         max-width: $content_max_width;
-        margin: 0 auto;
+        width: 800px;
+        // margin: 0 auto;
+    }
+    &.welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &.plot {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        >div {
+            display: flex;
+            
+        }
+        img {
+            width: 20%;
+        }
+        .plot-content {
+            padding: 0 0 0 3em;
+            display: flex;
+            flex-direction: column;
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    }
+    &.characters {
+        background-image: url("/img/rey-standing.jpg");
+        background-position: center top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 15em;
+            img {
+                border-radius: 50%;
+                height: auto;
+                margin: 0.2em;
+                &:nth-of-type(1) {
+                    @include img-size(8%)
+                }
+                &:nth-of-type(2) {
+                    @include img-size(10%)
+                }&:nth-of-type(3) {
+                    @include img-size(12%)
+                }
+                &:nth-of-type(4) {
+                    @include img-size(14%)
+                }
+                &:nth-of-type(5) {
+                    @include img-size(12%)
+                }
+                &:nth-of-type(6) {
+                    @include img-size(10%)
+                }
+                &:nth-of-type(7) {
+                    @include img-size(8%)
+                }
+            }
+        }
+    }
+    &.ratings {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between; //why it doesn't resize to 800px - it didn't resize as the width was not set-up (max-width doesn't do the job
+        .ratings-row {
+            display: flex;
+            padding-top: 2em;
+            justify-items: center;
+            justify-content: space-between;
+            
+            .rating-bar {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-end;
+                p {
+                    font-size: 1.3em;
+                    margin: 0;
+                }
+                .rating-level {
+                    width: 8em;
+                    background-color: $secondary_color;
+                }
+                .source {
+                    font-size: .8em;
+                }
+                
+            }
+        }
+    }
+    &.cast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .actor {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            .zoomed-img {
+                height: 12em;
+            }
+            .actor-link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 0;
+                transition: all 0.5s ease;
+                &:hover {
+                    transform: scale(1.2,1.2);
+                }
+                p {
+                    padding: 0.2em;
+                    width: 100%;
+                    background-color: rgba($color: #000000, $alpha: .5);
+                    margin: 0;
+                    font-size: 0.8em;
+                    position: relative;
+                    top: -1.5em;
+                    color: white;
+                    text-align: center;
+                }
+                img {
+                    height: 8em;
+                }
+            }
+            
+            >div {
+                padding: 0 0 0 2em;
+            }
+        }
+        
+    }
+    &.gallery {
+        background-image: url("/img/gallery.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1em;
+        h1 {
+            color: white;
+        }
+        >div {
+            max-width: none;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            a {
+                color: white;
+                font-size: 3em;
+                text-decoration: none;
+            }
+        }
     }
 
 }
@@ -50,6 +225,7 @@ section {
     background-image: url(/img/welcome.jpg);
     background-position: center bottom;
     background-size: cover;
+    background-attachment: fixed;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -71,9 +247,7 @@ section {
 h1 {
     text-align: center;
     margin: 0;
-    color: white;
+    color: black;
+    font-size: 2em;
 }
 
-.plot-content {
-    display: flex;
-}
