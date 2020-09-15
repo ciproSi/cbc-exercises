@@ -11,9 +11,17 @@ header {
     background-color: grey;
     display: flex;
     justify-content: center;
+    .burger {
+        display: none;
+        @media (max-width: 800px) {
+            display: block;
+               
+        }
+    }
     nav {
         @media (max-width: 800px) {
             display: none;
+            
         }
         
     }
@@ -21,7 +29,7 @@ header {
 
 main {
     display: flex;
-    padding: 2em;
+    // padding: 2em;
     justify-content: space-between;
     article {
         margin: 0 .5em 0 .5em;
@@ -29,7 +37,7 @@ main {
     @media (max-width: 800px) {
         flex-wrap: wrap;
         article {
-            flex-basis: 50%;
+            // flex-basis: 50%;
         }
     }
 }

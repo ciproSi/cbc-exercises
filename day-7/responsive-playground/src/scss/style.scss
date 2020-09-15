@@ -59,6 +59,8 @@ nav a {
   border-bottom: 2px solid transparent;
   @media (min-width: 768px) {
     padding: 0 .5em;
+    line-height: normal;
+    margin: .5rem 0;
   }
 }
 
