@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    padding: 1em;
+    background-color: grey;
+    display: flex;
+    justify-content: center;
+    nav {
+        @media (max-width: 800px) {
+            display: none;
+        }
+        
+    }
+}
+
+main {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+    article {
+        margin: 0 .5em 0 .5em;
+    }
+    @media (max-width: 800px) {
+        flex-wrap: wrap;
+        article {
+            flex-basis: 50%;
+        }
+    }
+}
