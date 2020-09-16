@@ -2,16 +2,27 @@
     box-sizing: border-box;
 }
 
+html {
+    
+    @media (min-width: 1400px) {
+        padding: 3em 0;
+        height: 100vh;
+        background-color: black;
+    }
+}
 body {
-    margin: 0;
+    margin: auto;
     display: flex;
     justify-content: flex-end;
     font-family: 'Lato', sans-serif;
-    height: 100vh;
-    background: url("/img/coffee-photo.jpg") center center/cover;
-
-    @media (min-width: 1440px) {
-        margin: 20em;
+    height: 100%;
+    width: 1400px;
+    background: url("/img/coffee-photo.jpg") center center/cover no-repeat;
+    
+    @media (max-width: 1400px) {
+        height: 100vh;
+        width: auto;
+        margin: 0;
     }
 
 }
@@ -21,7 +32,7 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 33vw;
+    width: 33%;
     padding: 1em 3em 3em 3em;
     background: linear-gradient(0deg, rgba(71, 43, 0, 0.527), rgba(71, 43, 0, 0.527));
     text-align: center;
