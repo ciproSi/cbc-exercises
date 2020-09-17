@@ -1,0 +1,28 @@
+@import '_variable.scss';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: $background-color;
+    font-family: "Alegreya Sans", sans-serif ;
+    font-weight: 300;
+}
+
+.page {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}

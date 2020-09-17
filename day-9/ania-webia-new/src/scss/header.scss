@@ -1,0 +1,32 @@
+@import '_variable.scss';
+.top-menu {
+    background-color: $sec-bg-color;
+    &__logo {
+        background-color: white;
+        height: 2.5em;
+        flex-grow: 0;
+        }
+    nav {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        @media (max-width: 930px) {
+            width:100%;
+        }
+        a {
+            flex-grow: 1;
+            text-align: center;
+            //to make padding posible to 
+            display: block;
+            padding: .6em 0 0 0;
+            color: white;
+            text-decoration: none;
+            // margin: auto;
+            &:hover {
+                background-color: $accent-color;
+            }
+        }
+    }
+}
+
+

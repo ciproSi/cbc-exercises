@@ -1,0 +1,411 @@
+
+
+
+
+h1,
+h2 {
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+
+
+
+nav div {
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+
+
+}
+
+h2 {
+    font-size: 2em;
+}
+
+
+
+
+
+/* header a {
+    flex-grow: 2;
+    color: lightgrey;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+    margin: auto;
+    background-color: rgb(77, 77, 77);
+    
+} */
+
+/* header a:hover {
+    background-color: #54be90;
+} */
+
+.white-spacer {
+    background-color: white;
+    height: 5em;
+}
+
+.hero {
+    background-image: url("../img/canyon.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color:  rgba(0, 0, 0, 0.4);
+    height: 80vh;
+    overflow: hidden;
+    justify-content: center;
+    
+}
+
+.name {
+    text-decoration: underline;
+    color: #54be90;
+}
+
+.claim {
+    justify-content: center;
+    height: 10em;
+    background-color: white;
+    padding: 0 10em 0 10em;
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 400;
+    
+
+}
+
+.project-stages {
+    background-color: rgb(54, 53, 53);
+    justify-content: space-around;
+    height: 20em;
+    padding: 0 5em 0 5em;
+
+}
+
+.box-row {
+    height: 4em;
+    background-color: rgb(54, 53, 53);
+    overflow: hidden;
+}
+
+.bubble {
+    background-color: white;
+    border-radius: 50%;
+    height: 8em;
+    width: 8em;
+    position: relative;
+    bottom: 4em;
+}
+
+.stage {
+    justify-items: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 4em 0 4em;
+}
+
+.stage h3 {
+    color: #54be90;
+    font-weight: 400;
+    text-align: center;
+}
+
+.stage p {
+    text-align: center;
+    color: white;
+}
+
+.skills {
+    background-color: white;
+    /* height: 35em; */
+    align-items: center;
+    padding: 3em 0 3em 0;
+}
+
+.skills h1 {
+    color: #54be90;
+    margin-bottom: .5em;
+}
+.progress {
+    height: 2.6em;
+    width: 80%;
+    align-items: stretch;
+    margin: 0.5em 0;
+    
+}
+
+.skill {
+    background-color: rgb(77, 77, 77);
+    color: white;
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    /* font-size: 1em; */
+    /* how to align the elements to the center */
+    padding: 0.6em 0 0 0;
+    /* margin: auto; */
+}
+
+.skill-progress {
+    background-color: lightgrey;
+    width: 90%;
+}
+
+.skill-value {
+    background-color: #54be90;
+    font-weight: bold;
+    text-align: right
+}
+
+.center {
+    justify-items: center;
+}
+
+.portfolio {
+    background-color: #54be90;
+    /* height: 50vh; */
+    padding: 3em 0 0 0;
+    align-items: center;
+    /* justify-items: center; */
+
+}
+
+.portfolio h1 {
+    color: white;
+    margin-bottom: .5em;
+}
+
+.portfolio-list {
+    justify-items: flex-start;
+    justify-content: space-between;
+    flex-flow: wrap;
+    width: 80%;
+    justify-items: center;
+}
+
+.portfolio-item {
+    align-items: center;
+    width: 31%;
+    min-width: 260px;
+    padding: .5em;
+    background-color: white;
+    margin-bottom: 1em;
+}
+
+.portfolio-item:hover {
+    background-color: lightgray;
+}
+
+.portfolio-item img {
+    width: 100%;
+}
+
+.portfolio p {
+    text-align: center;
+}
+
+.portfolio-item-background {
+    background-color: lightgray;
+    margin-top: .5em;
+}
+
+.portfolio-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about-me {
+    background-color: rgba(255, 255, 255, 0.918);
+    padding: 3em 0 1em 0;
+    align-items: center;
+    
+}
+
+.about-me h1 {
+    color: black;
+}
+
+.about-me-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+    margin: 2em 0 0 0;
+
+}
+
+.about-me-text {
+    width: 60%;
+    align-items: flex-end;
+}
+
+.about-me-text button {
+    margin: 2em 0 0 0;
+    align-self: flex-start;
+    width: 30%;
+    height: 3em;
+    border: 2px solid white;
+    font-size: 1em;
+    background-color: #54be90;
+    color:white
+}
+
+.about-me-text button:hover {
+    border: 2px solid #54be90;
+    background-color: white;
+    color: black;
+}
+.about-me-text p {
+    padding: 1em 0 0 0;
+    margin: 0;
+}
+
+.about-me img {
+    width: 35%;
+    border-radius: 100%;
+}
+
+hr {
+    width: 25%;
+    margin: 0;
+    align-self: center;
+    border-width: 4px;
+    border-color: #54be90;
+    border-style: solid;
+}
+
+.underline {
+    border-bottom: 5px solid #54be90;
+}
+
+.social-bar {
+    padding: 3em 0 3em 0;
+    align-items: center;
+    align-content: center;
+}
+
+
+.social-row {
+    padding: 2em 0 0 0;
+    width: 80%;
+    height: 12vh;
+    justify-content: space-between;
+    align-items: center ;
+
+}
+
+.social-row img {
+    width:25%;
+}
+
+.contact {
+    background-color: #54be90;
+    padding: 3em 0 2em 0;
+    align-items: center;
+}
+
+.contact-box {
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    padding-bottom: 2em;
+
+}
+
+.contact-box-message {
+    align-items: center;
+    width: 50%;
+
+}
+
+/* input {
+    height: 5em;
+    width: 30em;
+    margin: 1em;
+    background-color: transparent;
+    border: 0;
+    border-bottom: .08em solid white;
+     
+} */
+form {
+    width: 100%;
+}
+
+input[type="text"] {
+    /* height: 5em; */
+    width: 45%;
+    min-width: 10em;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 0.5px solid white;
+    outline: none;
+    color: white;
+    font-size: 1em;
+}
+
+input::placeholder {
+    color: white;
+    
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 0;
+    padding: .3em;
+    margin: 1em 0 1em 0;
+    font-family: "Alegreya sans", sans-serif;
+    border-width: 0;
+    letter-spacing: .1em;
+
+}
+
+textarea {
+    /* margin-top: 1em; */
+    width: 100%;
+    outline: none;
+}
+
+footer {
+    background-color: white;
+    align-items: center;
+    padding: 3em 0 3em 0;
+}
+
+footer .row {
+    width: 80%;
+    justify-content: space-between;
+}
+
+footer h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+footer .social {
+    padding: 3em 0 1.5em 0;
+    justify-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+
+svg:hover {
+    fill: #54be90;
+}
