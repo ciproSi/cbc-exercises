@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-header {
+    background-color:  rgb(233, 233, 233);
+    padding: 1em 1em;
+    text-align: center;
+    h1 {
+
+    }
+    &__description {
+        font-size: 1.1em;
+        color: rgb(104, 103, 103);
+    }
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(214, 214, 214);
+    margin-top: 1em;
+    padding: 1em;
+
+}
+
+.portfolio-item {
+    flex-basis: 90%;
+    margin: .5em 0;
+    box-shadow: 5px 8px 5px -5px #999999;
+    
+    @media (min-width: 1024px) {
+        flex-basis: 31%;
+    }
+
+    img {
+        border-radius: 5px;
+        width: 100%;
+    }
+        
+    
+    &__brief {
+        background-color: white;
+        padding: .5em;
+        margin-top: -1em;
+        border-radius: 5px;
+
+
+    }
+    
+}
