@@ -8,6 +8,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+// .container {
+//     @media (min-width: 1200px) {
+//         display: flex;
+//         flex-direction: column;
+//         align-content: space-around;;
+//         width: 1200px;
+        
+//     }
+// }
+
 .main-header {
     background-color:  rgb(233, 233, 233);
     padding: 1em 1em;
@@ -23,11 +33,15 @@ body {
 
 .portfolio {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
     background-color: rgb(214, 214, 214);
     margin-top: 1em;
     padding: 1em;
+
+    @media (min-width: 1024px) {
+        padding: 1em 5em;
+    }
 
 }
 
