@@ -1,0 +1,65 @@
+.claim {
+    background-color: white;
+    h3 {
+        padding: 2em 0;
+    }
+}
+
+.project-stages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(54, 53, 53);
+    justify-content: space-around;
+    padding: 0 5em 0 5em;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 20%;
+        @media (max-width: 942px) {
+            flex-basis: 55%;
+        }
+
+        h3 {
+            color: #54be90;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 1em;
+        }
+        p {
+            text-align: center;
+            color: white;
+            padding-bottom: 2em;
+        }
+
+    }
+}
+
+.box-row {
+    height: 4em;
+    background-color: rgb(54, 53, 53);
+    overflow: hidden;
+
+    @media (max-width: 942px) {
+        display: none;
+    }
+
+    &__bubble {
+        background-color: white;
+        border-radius: 50%;
+        height: 8em;
+        width: 8em;
+        position: relative;
+        bottom: 4em;
+
+        @media (max-width: 942px) {
+            display: none;
+        }
+    }
+}
+
+
+
+

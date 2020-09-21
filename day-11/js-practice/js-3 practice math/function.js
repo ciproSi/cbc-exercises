@@ -30,7 +30,7 @@ const fahrenheit_to_celsius = () => {
     document.getElementById('answer').innerHTML = fahrenheit + " °F = " + celsius + " °C";
 }
 
-
+// takhle to jsem to napsal ja, idiot
 const dice_roll = () => {
     let random = Math.random();
     let dice = 0;
@@ -47,9 +47,12 @@ const dice_roll = () => {
     else {
         dice = 6;
     }
-    
-    
     document.getElementById('answer').innerHTML = dice;
 }
 
-
+// takhle je to elegatně
+const dice_roll_2 = () => {
+    let random = Math.floor(Math.random() * 6) + 1;
+    console.log(random);
+    document.getElementById('answer').innerHTML = random;
+}

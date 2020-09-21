@@ -5,12 +5,23 @@
         height: 2.5em;
         flex-grow: 0;
         }
-    nav {
+    &__burger {
+        display: none;
+        @media (max-width: $small-break-point) {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: 2em; 
+        }
+    }
+        nav {
         display: flex;
         justify-content: space-around;
         width: 50%;
         @media (max-width: 930px) {
             width:100%;
+        }
+        @media (max-width: $small-break-point) {
+            display: none;
         }
         a {
             flex-grow: 1;
@@ -28,4 +39,28 @@
     }
 }
 
+.white-spacer {
+    background-color: white;
+    height: 5em;
+    @media (max-width: $small-break-point) {
+        display: none;
+    }
+}
 
+.hero-image {
+    background-image: url("/img/canyon.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-color:  rgba(0, 0, 0, 0.4);
+    height: 80vh;
+    overflow: hidden;
+    justify-content: center;
+
+    .name {
+        text-decoration: underline;
+        color: #54be90;
+    }
+
+}
