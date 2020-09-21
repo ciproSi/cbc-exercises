@@ -28,3 +28,9 @@ const set_headline = () => {
         }
 
 }
+
+const set_inner_code = (elementId, text) => {
+    
+    document.getElementById(elementId).innerHTML = text;
+    
+}
