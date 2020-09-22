@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            display: block;
+        }
+
+        .not-in-cart {
+            background-color: brown;
+            color: white;
+        }
+
+        .in-cart {
+            background-color: turquoise;
+            color: black;
+        }
+
+        .login-form {
+            padding-top: 2em;
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <img src="lekarnicka_loype_SQ_web.jpg" alt="psi lekarnicka" id="productImg">
+    <button class="not-in-cart" onclick="addToCart()">Buy me</button>
+    <input type="number" id="pcs">
+
+    <section class="login-form">
+            <label for="usrname">User name</label>
+            <input type="text" name="usrname" id="usrname">
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass">
+            <button id="login" onclick="checkPass()">LOGIN</button>
+    </section>
+</body>
+</html>
