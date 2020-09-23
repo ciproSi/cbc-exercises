@@ -4,69 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="functions.js"></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rolling dice</title>
-    <style>
-        .dice-container {
-            background-image: url('sides/side1.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .two {
-            background-image: url('sides/side2.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .three {
-            background-image: url('sides/side3.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .four {
-            background-image: url('sides/side4.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .five {
-            background-image: url('sides/side5.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-        .six {
-            background-image: url('sides/side6.png');
-            width: 100vw;
-            height: 100vh;
-            background-position: center center;
-            background-repeat: no-repeat;
-            text-align: center;
-        }
-
-    </style>
-
 </head>
 <body>
-    <div class="dice-container">
+    <!-- <div class="dice-container">
         <button onclick="sideBySide()">Next side of dice</button>
         <button onclick="randomRoll()">Alea iacta est</button>
-    </div>
+    </div> -->
+
+
+   <div class="container">
+        <div id="left-container" class="left-container">
+                <h1>Children's playing</h1>
+                <img src="sides/side1.png" alt="dice side">
+                <div>
+                    <button onclick="sideBySide_2()">Next side of dice</button>
+                    <button onclick="randomRoll_2()">Alea iacta est</button>
+                </div>
+                <div>
+                    <h5>How much you want to bet that nr. 6 will be rolled?</h5>
+                    <input type="number" id="betValue" name="betValue">
+                    <button onclick="placeBet()">Place the bet</button>
+                </div>
+                <div>
+                    <h4 id="betValueDisplay">Your current bet is 0</h4>
+                    <h4 id="wallet">This is in your wallet money right now: 100</h4>
+                </div>
+        </div>
+
+
+        <div class="right-container">
+            <h1>Under - Over 7</h1>
+            <img src="sides/side1.png" alt="dice side" id="diceFace1">
+            <img src="sides/side1.png" alt="dice side" id="diceFace2">
+            <h4 id="score">Total score</h4>
+            <h4 id="walletAmount">Your wallet</h4>
+            <label for="yourBet">Your bet</label>
+            <input type="number" id="yourBet" name="yourBet">
+            <br>
+            <input type="radio" name="typeOfBet" value="U">
+            <label for="male">Under</label><br>
+            <input type="radio" name="typeOfBet" value="O">
+            <label for="female">Over</label><br>
+            <input type="radio" name="typeOfBet" value="S">
+            <label for="other">Seven</label>
+            <br>
+            <button onclick="underOver7()">Rock'n'Roll</button>
+
+        </div>
+   </div>
+
 </body>
 </html>
