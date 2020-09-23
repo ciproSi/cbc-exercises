@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+    <title>Salary calculator</title>
+    <style>
+        .input-form {
+            display: flex;
+            flex-direction: column;
+            width: 30vw;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+        }
+        button {
+            margin-top: 2em;
+        }
+
+        h1 {
+            margin-left: 3em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="input-form">
+            <label for="grossPerHour">Gross income per hour</label>
+            <input type="text" name="grossPerHour" id="grossPerHour">
+            <label for="hoursPerDay">Working hours a day</label>
+            <input type="text" name="hoursPerDay" id="hoursPerDay">
+            <label for="daysInMonth">Working days a month</label>
+            <input type="text" name="daysInMonth" id="daysInMonth">
+            <label for="tax">Taxes</label>
+            <input type="text" name="tax" id="tax">
+            <button onclick="monthSalary()">Calculate my month salary</button>
+        </div>
+        <h1 id="result">Here we will show your result!</h1>
+    </div>
+</body>
+</html>
