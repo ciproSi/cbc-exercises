@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="function.js"></script>
+    <title>Simply calculator</title>
+</head>
+<body>
+    <div class="container">
+        <input type="number" id="result" value="0" class="result">
+        <input type="number" id="input" class="input">
+        <button onclick="calculate()">=</button>
+    </div>
+    <script>
+        document.addEventListener("click", calculate());
+    </script>
+</body>
+</html>
