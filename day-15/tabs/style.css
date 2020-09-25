@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.tabs {
+    width: 600px;
+}
+
+.tabs__row {
+    display: flex;
+}
+
+.tabs__btn {
+    width: 33%;
+    height: 3em;
+    border-radius: 3px;
+    background-color: rgb(248, 247, 247);
+    transition: 400ms;
+}
+
+.tabs__btn:hover {
+    background-color: rgb(163, 159, 159);
+}
+
+.tabs__btn--active {
+    color: white;
+    background-color: rgb(100, 100, 100);
+}
