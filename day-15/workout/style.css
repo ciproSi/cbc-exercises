@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+img {
+    width: 20em;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    border: 2px solid rgb(148, 116, 28);
+    padding: 2em;
+    box-shadow: 5px 5px 12px -4px #94741C;
+
+}

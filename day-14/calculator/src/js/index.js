@@ -19,9 +19,16 @@ const plus = () => {
 
 plusBtn.addEventListener('click', plus);
 
-
-// perform
+// perform last operation on equal click
 equalsBtn.addEventListener('click', () => {
     if (op === "+") {plus ()};
 
+})
+
+//clear all
+clearBtn.addEventListener('click', () => {
+    result = 0;
+    inputAmount.value = 0;
+    op = 0;
+    resultDisplay.textContent = result;
 })
