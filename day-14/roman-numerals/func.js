@@ -1,8 +1,13 @@
 'use strict';
 
 //define global variables
-const btn = document.getElementById('submit');
-let randomNum = 0;
+const btn = document.getElementById('submit'),
+      rightAnswersDisplay = document.getElementById('rightAnswers'),
+      wrongAnswersDisplay = document.getElementById('wrongAnswers');
+
+let randomNum = 0,
+    rightAnswers = 0,
+    wrongAnswers = 0;
 
 const play = () => {
     //generate random number 0-4000, get element to display it
@@ -72,10 +77,14 @@ const evaluate = () => {
 
     //get the user's answer element
     const answer = document.getElementById('answer');
+    
+    //compare the result and answer and display the answer and the new score
     if (answer.value.toUpperCase() === result) {
-        console.log(usrInput, result, answer.value, "winner");
+        document.getElementById('correctAnswer').innerHTML = "Yes!!!";
+        rightAnswersDisplay.textContent = "Correct: " + ++rightAnswers;
     } else {
-        console.log(usrInput, result, answer.value, "looser");
+        document.getElementById('correctAnswer').innerHTML = "Nope, the correct answer for " + randomNum + " is: " + result;
+        wrongAnswersDisplay.textContent = "Wrong: " + ++wrongAnswers;
     }
 
     //start new round
