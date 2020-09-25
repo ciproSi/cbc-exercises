@@ -28,5 +28,5 @@ body {
 
 .tabs__btn--active {
     color: white;
-    background-color: rgb(100, 100, 100);
+    background-color: rgb(100, 100, 100) !important;
 }
