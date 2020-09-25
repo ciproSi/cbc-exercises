@@ -1,0 +1,39 @@
+
+@keyframes rotate {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.spinner--hidden {
+    display: none;
+}
+
+.image {
+    width: 100vw;
+}
+
+.image--hidden {
+    display: none;
+}
+
