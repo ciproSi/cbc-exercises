@@ -23,3 +23,7 @@ img {
     box-shadow: 5px 5px 12px -4px #94741C;
 
 }
+
+.hidden {
+    opacity: 0;
+}
