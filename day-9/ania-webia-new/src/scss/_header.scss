@@ -39,6 +39,37 @@
     }
 }
 
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    height: 0vh;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition: 1s;
+    animation-timing-function: linear;
+    
+    img {
+        align-self: flex-end;
+    }
+
+    a {
+        color: #54be90;
+        font-size: 2em;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    &--display {
+        height: 100vh;
+        padding: 1em 1em 2em 1em;
+        transform: rotateX(0);
+    }
+
+}
+
 .white-spacer {
     background-color: white;
     height: 5em;
