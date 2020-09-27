@@ -23,8 +23,11 @@ closeMobMenu.addEventListener('click', () => {
     mobileMenuContainer.classList.toggle('mobile-menu--display');
 });
 
-const mobileMenuLinks = document.querySelector('.mobile.menu a');
-mobileMenuLinks.addEventListener('click', () => {
-    pageContainer.classList.toggle('page--hidden');
-    mobileMenuContainer.classList.toggle('mobile-menu--display');
+//listen to clicks in all the mobile menu a elements and close the mobile menu and show the page on click
+document.querySelectorAll('.mobile-menu__link').forEach(item => {
+    item.addEventListener('click', () => {
+        pageContainer.classList.toggle('page--hidden');
+        mobileMenuContainer.classList.toggle('mobile-menu--display');
+    });
 });
+
