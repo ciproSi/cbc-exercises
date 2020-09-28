@@ -37,7 +37,27 @@ const departures = [
         status: "delayed",
         track: 8,
     },
-
+    {time: 517,
+        train: "Shore Line East",
+        no: 25,
+        to: "Horní Planá",
+        status: "delayed",
+        track: 8,
+    },
+    {time: 517,
+        train: "Shore Line East",
+        no: 25,
+        to: "Horní Planá",
+        status: "delayed",
+        track: 8,
+    },
+    {time: 494,
+        train: "Acela Express",
+        no: 2151,
+        to: "Horní Planá",
+        status: "on time",
+        track: 14
+    },
 ];
 
 //get the elements to display

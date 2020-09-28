@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    background-color: coral;
+    width: 30%;
+    padding: .5em;
+}
+
+.item:nth-of-type(2n) {
+    background-color: darkgoldenrod;
+}
+
+.item__name {
+    text-transform: uppercase;
+}
