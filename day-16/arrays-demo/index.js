@@ -15,3 +15,32 @@ names.forEach((name, index) => console.log(name, index));
 
 
 
+const shoppingList = [
+    {
+        name: "jabla",
+        amount: "1kg"
+    },
+    {
+        name: "pomeranče",
+        amount: "1kg"
+    },
+    {
+        name: "banány",
+        amount: "3kg"
+    },
+    {
+        name: "švestky",
+        amount: "0,5kg"
+    }
+];
+
+const shoppingListElm = document.querySelector('.shoppingList');
+
+shoppingList.forEach((item) => {
+    shoppingListElm.innerHTML += "<li>" + item.name + " " + item.amount + "</li>";
+});
+
+//easier syntax - string interpolation
+shoppingList.forEach((item) => {
+    shoppingListElm.innerHTML += `<li>${item.name} ${item.amount}</li>`;
+});

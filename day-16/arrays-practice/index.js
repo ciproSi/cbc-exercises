@@ -1,6 +1,6 @@
 'use strict';
 
-const numbers = [1, 2, 3, 4, 5, 6, 18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, -14, -10, 13, 15, 8, -15, -2, 17];
+const numbers = [220, 1, 2, 3, 4, 5, 30, 6, 18, 8, -24, 28, -17, 14, -10, 24, 12, -31, 19, 32, 185, -14, -10, 13, 15, 8, -15, -2, 17];
 
 // console.log(numbers[Math.floor(numbers.length / 2)]);
 
@@ -77,11 +77,11 @@ console.log('sum of squered differences: ' + sumOfSqDif);
 console.log('variance: ' + sumOfSqDif / numbers.length);
 
 //Find the biggest element in the array
-let max = numbers[0];
-numbers.forEach((number) => {
-    if (number > max) {max = number};
-});
-console.log('max number is:' + max);
+// let max = numbers[0];
+// numbers.forEach((number) => {
+//     if (number > max) {max = number};
+// });
+// console.log('max number is:' + max);
 
 //Find the biggest element which is less then 16
 
@@ -117,9 +117,33 @@ numbers.forEach((number, index) => {
         longestAscSeq = [number];
     };
 });
+
+    //find the maximum value in maxLengthAr array  which is the final result
 let maxLength = 1;
 maxLengthAr.forEach((number) => {
     if (number > maxLength) {maxLength = number};
 });
-console.log('longest sequence of acending values is:' + maxLength);
+console.log('longest sequence of acending values is: ' + maxLength);
+
+
+
+//Find the second biggest element in the array.
+
+    //first step - find the biggest value in array
+let max = numbers[0];
+numbers.forEach((number) => {
+    if (number > max) {max = number};
+});
+    //second step - loop again trhough the array and compare
+let secondMax = 0;
+let currentSecondMax = 0;
+numbers.forEach((number) => {
+    if (number < max) {
+        currentSecondMax = number;
+    }
+    if (currentSecondMax >= secondMax) {
+        secondMax = currentSecondMax;
+    };
+});
+console.log('second max number is:' + secondMax);
 
