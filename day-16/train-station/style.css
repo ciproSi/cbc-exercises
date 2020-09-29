@@ -21,3 +21,7 @@ td {
 .table-row:nth-of-type(2n+1) {
     background-color: orange;
 }
+
+.table-row--delayed {
+    background-color: red !important
+}

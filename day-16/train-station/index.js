@@ -20,35 +20,35 @@ const departures = [
         train: "Shore Line East",
         no: 25,
         to: "Horní Planá",
-        status: "delayed",
+        status: "on time",
         track: 8,
     },
     {time: 517,
         train: "Shore Line East",
         no: 25,
         to: "Horní Planá",
-        status: "delayed",
+        status: "on time",
         track: 8,
     },
     {time: 517,
         train: "Shore Line East",
         no: 25,
         to: "Horní Planá",
-        status: "delayed",
+        status: "on time",
         track: 8,
     },
     {time: 517,
         train: "Shore Line East",
         no: 25,
         to: "Horní Planá",
-        status: "delayed",
+        status: "on time",
         track: 8,
     },
     {time: 517,
         train: "Shore Line East",
         no: 25,
         to: "Horní Planá",
-        status: "delayed",
+        status: "on time",
         track: 8,
     },
     {time: 494,
@@ -73,14 +73,31 @@ departures.forEach((train) => {
     } else {
         timeOfDeparture = 23 - (Math.floor(train.time / 60)) + ":" + (60 - train.time % 60);
     };
-    departureTableElm.innerHTML += `
-        <tr class="table-row">
-            <td>${timeOfDeparture}</td>
-            <td>${train.train}</td>
-            <td>${train.no}</td>
-            <td>${train.to}</td>
-            <td>${train.status}</td>
-            <td>${train.track}</td>
-        </tr>
+    const tableRow = document.createElement('tr');
+    tableRow.className = "table-row";
+    tableRow.innerHTML = `
+        <td>${timeOfDeparture}</td>
+        <td>${train.train}</td>
+        <td>${train.no}</td>
+        <td>${train.to}</td>
+        <td class="train-status">${train.status}</td>
+        <td>${train.track}</td>
+        <td><button class="btn-delayed">Delayed</button></td>
     `;
+
+    const btnDelayedElm = tableRow.querySelector('.btn-delayed');
+    btnDelayedElm.addEventListener('click', () => {
+        //change the array according to current train status
+        train.status === "on time" ? train.status = "delayed" : train.status = "on time";
+        
+        //get the element to display current train status and display it
+        const status = tableRow.querySelector('.train-status');
+        status.textContent = train.status;
+        
+        //change the bg according to current state of the train
+        tableRow.classList.toggle('table-row--delayed');
+        
+    });
+    departureTableElm.appendChild(tableRow);    
 });
+
