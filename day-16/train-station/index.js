@@ -55,7 +55,7 @@ const departures = [
         train: "Acela Express",
         no: 2151,
         to: "Horní Planá",
-        status: "on time",
+        status: "56",
         track: 14
     },
 ];
@@ -65,52 +65,76 @@ const departureTableElm = document.querySelector('.departure-table');
 
 //display data to the table
 let timeOfDeparture;
-departures.forEach((train) => {
-    
-    //put 0 in front of minute if there is less then 10 minutes
-    if (60 - train.time % 60 < 10) {
-        timeOfDeparture = 23 - (Math.floor(train.time / 60)) + ":0" + (60 - train.time % 60);
-    } else {
-        timeOfDeparture = 23 - (Math.floor(train.time / 60)) + ":" + (60 - train.time % 60);
-    };
-    const tableRow = document.createElement('tr');
-    tableRow.className = "table-row";
-    tableRow.innerHTML = `
-        <td>${timeOfDeparture}</td>
-        <td>${train.train}</td>
-        <td>${train.no}</td>
-        <td>${train.to}</td>
-        <td class="train-status">${train.status}</td>
-        <td>${train.track}</td>
-        <td><button class="btn-delayed">Delayed</button></td>
-    `;
 
-    const btnDelayedElm = tableRow.querySelector('.btn-delayed');
+const showTrainDepartures = () => {
+    departures.forEach((train, index) => {
     
-    btnDelayedElm.addEventListener('click', () => {
-        const statusElm = tableRow.querySelector('.train-status');
-        if (train.status === "on time") {
-            statusElm.innerHTML = `<input type="text" class="delay-input">`;
-            const delayInputElm = statusElm.querySelector('.delay-input');
-            delayInputElm.focus();
-            delayInputElm.addEventListener('keydown', (event) => {
-                if (event.key === "Enter") {
-                    const delayInput = delayInputElm.value;
-                    train.status = delayInput;
-                    statusElm.innerHTML = `Current delay: ${train.status} min.`;
-                    btnDelayedElm.textContent = "No delay";
-                    tableRow.classList.toggle('table-row--delayed');
-                };
-            });
+        //put 0 in front of minute if there is less then 10 minutes
+        if (60 - train.time % 60 < 10) {
+            timeOfDeparture = 23 - (Math.floor(train.time / 60)) + ":0" + (60 - train.time % 60);
         } else {
-            train.status = "on time";
-            statusElm.textContent = train.status;
-            btnDelayedElm.textContent = "Delayed";
+            timeOfDeparture = 23 - (Math.floor(train.time / 60)) + ":" + (60 - train.time % 60);
+        };
+        const tableRow = document.createElement('tr');
+        tableRow.className = "table-row";
+        tableRow.innerHTML = `
+            <td>${timeOfDeparture}</td>
+            <td>${train.train}</td>
+            <td>${train.no}</td>
+            <td>${train.to}</td>
+            <td class="train-status">${train.status}</td>
+            <td>${train.track}</td>
+            <td><button class="btn-delayed">Delayed</button></td>
+            <td><button class="btn-crashed">Crashed</button></td>
+        `;
+    
+        //check the status for delays and change row bg accordingly
+        if (train.status !== "on time") {
             tableRow.classList.toggle('table-row--delayed');
         };
 
+        const btnDelayedElm = tableRow.querySelector('.btn-delayed');
+        
+        btnDelayedElm.addEventListener('click', () => {
+            const statusElm = tableRow.querySelector('.train-status');
+            if (train.status === "on time") {
+                statusElm.innerHTML = `<input type="text" class="delay-input">`;
+                const delayInputElm = statusElm.querySelector('.delay-input');
+                delayInputElm.focus();
+                delayInputElm.addEventListener('keydown', (event) => {
+                    if (event.key === "Enter") {
+                        const delayInput = delayInputElm.value;
+                        train.status = delayInput;
+                        statusElm.innerHTML = `Current delay: ${train.status} min.`;
+                        btnDelayedElm.textContent = "No delay";
+                        tableRow.classList.toggle('table-row--delayed');
+                    };
+                });
+            } else {
+                train.status = "on time";
+                statusElm.textContent = train.status;
+                btnDelayedElm.textContent = "Delayed";
+                tableRow.classList.toggle('table-row--delayed');
+            };
+    
+        });
+    
+        //delete train if it's being crashed by ČD
+        const btnCrashedElm = tableRow.querySelector('.btn-crashed');
+        btnCrashedElm.addEventListener('click', () => {
+            departures.splice(index,1);
+            departureTableElm.removeChild(tableRow);
+            // console.log(departures);
+            departureTableElm.innerHTML = "";
+            showTrainDepartures();
+        });
+    
+        departureTableElm.appendChild(tableRow);    
     });
 
-    departureTableElm.appendChild(tableRow);    
-});
+};
+
+showTrainDepartures();
+
+
 
