@@ -26,7 +26,7 @@ img {
     height: 50px;
 }
 
-.message__self--left {
+.message__self--local {
     border-radius: 5px;
     width: 210px;
     background-color: blue;
@@ -35,7 +35,7 @@ img {
     margin: .2rem 0 auto 0;
 }
 
-.message__self--right {
+.message__self--remote {
     border-radius: 5px;
     width: 210px;
     background-color: lightgrey;
@@ -43,6 +43,22 @@ img {
     margin: .2rem 0 auto 0;
 }
 
-.message--right {
+.message--remote {
     flex-direction: row-reverse;
 }
+
+.message--local {
+    flex-direction: row;
+}
+
+.btn-like {
+    margin: .2rem .2rem auto .2rem;
+    width: 30px;
+    height: 30px;
+    background: url('thumbs-up.png') center / contain no-repeat;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0;
+}
+
+

@@ -3,22 +3,23 @@
 const containerElm = document.querySelector('.container');
 conversation.forEach((message,index) => {
     setTimeout(() => {
-        if (message.side === "local") {
-            containerElm.innerHTML += `
-                <div class="message message--right">
-                <img src="${message.name.toLowerCase()}.png" alt="unicorn">
-                <div class="message__self--right">${message.text}</div>
+            const msg = document.createElement('div');
+            msg.className = `message message--${message.side}`;
+            msg.innerHTML = `
+                <img src="${message.name.toLowerCase()}.png" alt="">
+                <div class="message__self--${message.side}">${message.text}</div>
+                <button class="btn-like"></button>
             `;
-        };
-        if (message.side === "remote") {
-            containerElm.innerHTML += `
-                <div class="message message--left">
-                <img src="${message.name.toLowerCase()}.png" alt="cleverbot">
-                <div class="message__self--left">${message.text}</div>
-            `;
-        };
+            const likeBtnElm = msg.querySelector('.btn-like');
+            let likesAmount = 0;
+            likeBtnElm.addEventListener('click', () => {
+                likeBtnElm.innerHTML = ++likesAmount; 
+            });
+            containerElm.appendChild(msg);
     }, index * 800);
 });    
+
+
 
     
     
