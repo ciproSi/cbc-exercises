@@ -86,18 +86,31 @@ departures.forEach((train) => {
     `;
 
     const btnDelayedElm = tableRow.querySelector('.btn-delayed');
+    
     btnDelayedElm.addEventListener('click', () => {
-        //change the array according to current train status
-        train.status === "on time" ? train.status = "delayed" : train.status = "on time";
-        
-        //get the element to display current train status and display it
-        const status = tableRow.querySelector('.train-status');
-        status.textContent = train.status;
-        
-        //change the bg according to current state of the train
-        tableRow.classList.toggle('table-row--delayed');
-        
+        const statusElm = tableRow.querySelector('.train-status');
+        if (train.status === "on time") {
+            statusElm.innerHTML = `<input type="text" class="delay-input">`;
+            const delayInputElm = statusElm.querySelector('.delay-input');
+            delayInputElm.focus();
+            delayInputElm.addEventListener('keydown', (event) => {
+                if (event.key === "Enter") {
+                    const delayInput = delayInputElm.value;
+                    train.status = delayInput;
+                    statusElm.innerHTML = `Current delay: ${train.status} min.`;
+                    btnDelayedElm.textContent = "No delay";
+                    tableRow.classList.toggle('table-row--delayed');
+                };
+            });
+        } else {
+            train.status = "on time";
+            statusElm.textContent = train.status;
+            btnDelayedElm.textContent = "Delayed";
+            tableRow.classList.toggle('table-row--delayed');
+        };
+
     });
+
     departureTableElm.appendChild(tableRow);    
 });
 
