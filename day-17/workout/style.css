@@ -61,4 +61,14 @@ img {
     border: 0;
 }
 
+.btn-delete {
+    margin: .2rem .2rem auto .2rem;
+    width: 30px;
+    height: 30px;
+    background: url('menu-close.png') center / contain no-repeat;
+    background-color: red;
+    border-radius: 50%;
+    border: 0;
+}
+
 
