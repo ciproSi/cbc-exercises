@@ -2,35 +2,27 @@
 
 console.log('It works');
 
-const btnMinusElm = document.getElementById('minus'),
-      btnPlusElm = document.getElementById('plus'),
-      counterElm = document.getElementById('counter'),
-      knobElm = document.getElementById('knob');
+let currentState = 2;
 
-let currentState = Number(counterElm.textContent);
-
-const progressPlus = () => {
-    if (currentState < 10) {    
-        const newState = (currentState + 1) * 10;
-        currentState++;
-        knobElm.style.width = newState + "%";
-        counterElm.textContent = newState / 10;
-    };
+const update = () => {
+    const counterElm = document.getElementById('counter'),
+          knobElm = document.getElementById('knob');
+    knobElm.style.width = `${currentState * 10}%`;
+    counterElm.textContent = currentState;
 };
 
-const progressMinus = () => {
+document.getElementById('minus').addEventListener('click', () => {
     if (currentState > 0) {
-        const newState = (currentState - 1) * 10;
         currentState--;
-        knobElm.style.width = newState + "%";
-        counterElm.textContent = newState / 10;
     };
-};
-
-btnMinusElm.addEventListener('click', () => {
-    progressMinus();
+    update();
 });
 
-btnPlusElm.addEventListener('click', () => {
-    progressPlus();
+document.getElementById('plus').addEventListener('click', () => {
+    if (currentState < 10) {    
+        currentState++;
+    };
+    update();
 });
+
+update();
