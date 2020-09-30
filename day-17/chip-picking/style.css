@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.game-container {
+    margin: 2rem auto;
+    border: 1px solid grey;
+    width: 780px;
+    height: 650px;
+    position: relative;
+}
+
+.chip {
+    display: flex;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    padding: 15px 27px;
+    color: white;
+    font-size: 3rem;
+       
+
+}
+
+.chip--one {
+    background-color: green;
+}
+
+.chip--five {
+    background-color: red;
+}
