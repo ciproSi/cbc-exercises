@@ -1,11 +1,12 @@
 class ProgressBar {
-    constructor(currentState, backgroundColor) {
+    constructor(currentState, backgroundColor, range) {
         this.currentState = currentState;
         this.backgroundColor = backgroundColor;
+        this.range = range;
     }
     
     increase() {
-        if (this.currentState < 10) {
+        if (this.currentState < this.range) {
             this.currentState++;
         };
         this.update();            
@@ -23,7 +24,7 @@ class ProgressBar {
         element.className = 'progress-bar';
         element.innerHTML = `
             <div id="label" class="label">
-                <span class="counter"></span>/<span id="maximum">10</span>
+                <span class="counter"></span>/<span class="maximum"></span>
             </div>
             <div class="progress">
                 <div class="btn-minus"></div>
@@ -51,10 +52,12 @@ class ProgressBar {
     
     update() {
         const counterElm = this.element.querySelector('.counter'),
-              knobElm = this.element.querySelector('.knob');
-        knobElm.style.width = `${this.currentState * 10}%`;
+              knobElm = this.element.querySelector('.knob'),
+              maxElm = this.element.querySelector('.maximum');
+        knobElm.style.width = `${this.currentState * 100 / this.range}%`;
         counterElm.textContent = this.currentState;
         knobElm.style.backgroundColor = this.backgroundColor;
+        maxElm.textContent = this.range;
     }
 
 

@@ -1,21 +1,22 @@
 'use strict';
 
 class Rating {
-    constructor(ratingValue) {
+    constructor(ratingValue, ratingRange) {
         this.ratingValue = ratingValue;
+        this.ratingRange = ratingRange;
     }
 
     render () {
         let element = document.createElement('div');
         element.className = 'rating';
+        let amountOfStarsElm = '';
+        for (let i = 0; i < this.ratingRange; i++) {
+            amountOfStarsElm += '<div class="rating__star"></div>';
+        };
         element.innerHTML = `
             <div class="rating__value"></div>
             <div class="rating__stars">
-                <div class="rating__star rating__star--on"></div>
-                <div class="rating__star rating__star--on"></div>
-                <div class="rating__star rating__star--on"></div>
-                <div class="rating__star"></div>
-                <div class="rating__star"></div>
+                ${amountOfStarsElm}
             </div>
         `;
         const starsAll = element.querySelectorAll('.rating__star');
@@ -34,7 +35,6 @@ class Rating {
     }
 
     update(index) {
-        console.log(index);
         const starsAll = this.element.querySelectorAll('.rating__star');
         starsAll.forEach((star) => {
             star.classList.remove('rating__star--on');
@@ -49,11 +49,8 @@ class Rating {
     }
 }
 
-
-
-
 const testElm = document.querySelector('.test');
-let rating1 = new Rating(5);
-let rating2 = new Rating(3);
+let rating1 = new Rating(5, 10);
+let rating2 = new Rating(3, 5);
 rating1.mount(testElm);
 rating2.mount(testElm);

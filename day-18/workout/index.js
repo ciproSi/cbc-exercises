@@ -1,8 +1,8 @@
 'use strict';
 
 
-const bar = new ProgressBar(5, "yellow");
-const bar2 = new ProgressBar(8, "orange");
+const bar = new ProgressBar(5, "yellow", 100);
+const bar2 = new ProgressBar(8, "orange", 20);
 
 const containerElm = document.querySelector('.container');
 
