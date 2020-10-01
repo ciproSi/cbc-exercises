@@ -1,7 +1,7 @@
 'use strict';
-let red = new ProgressBar(0, 255, 255, 0, 0);
-let green = new ProgressBar(0, 255, 255 ,255, 0);
-let blue = new ProgressBar(0, 255, 255 ,0, 255);
+let red = {currentState: 0};
+let green = {currentState: 0};
+let blue = {currentState: 0};
 
 const changeColorOfBoard = () => {
     const mixBoardElm = document.querySelector('.mix-board');
@@ -10,8 +10,8 @@ const changeColorOfBoard = () => {
 };
 
  red = new ProgressBar(0, 255, 255, 0, 0, changeColorOfBoard);
- green = new ProgressBar(0, 255, 255 ,255, 0, changeColorOfBoard);
- blue = new ProgressBar(0, 255, 255 ,0, 255, changeColorOfBoard);
+ green = new ProgressBar(0, 255, 255, 255,0 , changeColorOfBoard);
+ blue = new ProgressBar(0, 255, 255 ,0 , 255, changeColorOfBoard);
 
 const containerElm = document.querySelector('.container');
 

@@ -11,7 +11,7 @@ class ProgressBar {
     increase() {
         if (this.currentState < this.range) {
             this.currentState++;
-            this.onChange();
+            // this.onChange();
         };
         this.update();
 
@@ -20,7 +20,7 @@ class ProgressBar {
     decrease() {
         if (this.currentState > 0) {
             this.currentState--;
-            this.onChange();
+            // this.onChange();
         };
         this.update();
     }
@@ -76,6 +76,7 @@ class ProgressBar {
                 ${this.bColor})
         `;
         maxElm.textContent = this.range;
+        this.onChange();
          
     }
 
