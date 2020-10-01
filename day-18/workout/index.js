@@ -1,28 +1,10 @@
 'use strict';
 
-console.log('It works');
 
-let currentState = 2;
+const bar = new ProgressBar(5, "yellow");
+const bar2 = new ProgressBar(8, "orange");
 
-const update = () => {
-    const counterElm = document.getElementById('counter'),
-          knobElm = document.getElementById('knob');
-    knobElm.style.width = `${currentState * 10}%`;
-    counterElm.textContent = currentState;
-};
+const containerElm = document.querySelector('.container');
 
-document.getElementById('minus').addEventListener('click', () => {
-    if (currentState > 0) {
-        currentState--;
-    };
-    update();
-});
-
-document.getElementById('plus').addEventListener('click', () => {
-    if (currentState < 10) {    
-        currentState++;
-    };
-    update();
-});
-
-update();
+bar.mount(containerElm);
+bar2.mount(containerElm);
