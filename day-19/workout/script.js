@@ -52,5 +52,7 @@ class Rating {
 const testElm = document.querySelector('.test');
 let rating1 = new Rating(5, 10);
 let rating2 = new Rating(3, 5);
+let rating3 = new Rating(11, 11);
 rating1.mount(testElm);
 rating2.mount(testElm);
+rating3.mount(testElm);

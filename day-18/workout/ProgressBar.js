@@ -1,20 +1,26 @@
 class ProgressBar {
-    constructor(currentState, backgroundColor, range) {
+    constructor(currentState, range, rColor, gColor, bColor, onChange) {
         this.currentState = currentState;
-        this.backgroundColor = backgroundColor;
         this.range = range;
+        this.rColor = rColor;
+        this.gColor = gColor;
+        this.bColor = bColor;
+        this.onChange = onChange;
     }
     
     increase() {
         if (this.currentState < this.range) {
             this.currentState++;
+            this.onChange();
         };
-        this.update();            
+        this.update();
+
     }
     
     decrease() {
         if (this.currentState > 0) {
             this.currentState--;
+            this.onChange();
         };
         this.update();
     }
@@ -36,11 +42,19 @@ class ProgressBar {
         `;
         
         const btnElmPlus = element.querySelector('.btn-plus');
-        btnElmPlus.addEventListener('click', () => this.increase());
-
+        btnElmPlus.addEventListener('mousedown', () => {
+            this.interval = setInterval(() => {
+                this.increase(); 
+            }, 50);
+        });
+        btnElmPlus.addEventListener('mouseup', () => clearInterval(this.interval));
         const btnElmMinus = element.querySelector('.btn-minus');
-        btnElmMinus.addEventListener('click', () => this.decrease());
-        console.log(element);
+        btnElmMinus.addEventListener('mousedown', () => {
+            this.interval = setInterval(() => {
+                this.decrease();
+            }, 50);
+        });
+        btnElmMinus.addEventListener('mouseup', () => clearInterval(this.interval));
         return element;
     }
         
@@ -56,8 +70,13 @@ class ProgressBar {
               maxElm = this.element.querySelector('.maximum');
         knobElm.style.width = `${this.currentState * 100 / this.range}%`;
         counterElm.textContent = this.currentState;
-        knobElm.style.backgroundColor = this.backgroundColor;
+        knobElm.style.backgroundColor = `
+            rgb(${this.currentState / this.range * this.rColor},
+                ${this.gColor},
+                ${this.bColor})
+        `;
         maxElm.textContent = this.range;
+         
     }
 
 

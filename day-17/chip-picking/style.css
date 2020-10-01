@@ -31,6 +31,18 @@ body {
     background-color: green;
 }
 
+.chip--2 {
+    background-color: rgb(16, 79, 131);
+}
+
+.chip--3 {
+    background-color: rgb(131, 16, 116);
+}
+
+.chip--4 {
+    background-color: rgb(129, 131, 16);
+}
+
 .chip--5 {
     background-color: red;
 }
