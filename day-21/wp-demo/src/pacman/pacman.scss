@@ -1,0 +1,28 @@
+.pacboy {
+    &-active-light {
+      background-image: url('./img/pacboy-active-light.png');
+    
+    }
+  
+    &-active-medium {
+      background-image: url('./img/pacboy-active-medium.png');
+    }
+  
+    &-active-dark {
+      background-image: url('./img/pacboy-active-dark.png');
+    }
+  }
+  
+  .pacgirl {
+    &-active-light {
+      background-image: url('./img/pacgirl-active-light.png');
+    }
+  
+    &-active-medium {
+      background-image: url('./img/pacgirl-active-medium.png');
+    }
+  
+    &-active-dark {
+      background-image: url('./img/pacgirl-active-dark.png');
+    }
+  }
