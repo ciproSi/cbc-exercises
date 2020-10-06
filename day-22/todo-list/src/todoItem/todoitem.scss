@@ -1,0 +1,11 @@
+.item {
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    padding: .5em;
+
+    &__input {
+        width: 25vw;
+        margin-right: 1.5em;
+    }
+}

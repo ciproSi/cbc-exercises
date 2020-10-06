@@ -1,0 +1,20 @@
+.toggle {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 2em;
+    height: 2em;
+    
+    &--question {
+        background-image: url('./img/question.svg');
+    }
+
+    &--check {
+        background-image: url('./img/check.svg');
+    }
+
+    &--cross {
+        background-image: url('./img/cross.svg');
+    }
+
+}
