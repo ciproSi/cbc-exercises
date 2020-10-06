@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import './dayforecast.scss';
 
 export class DayForecast extends React.Component {
