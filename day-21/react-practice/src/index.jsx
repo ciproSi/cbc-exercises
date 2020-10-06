@@ -38,7 +38,7 @@ class App extends React.Component {
     render () {
         return (
             <>
-                <Message from={messages[1].from} subject={messages[1].subject} messageBody={messages[1].messageBody} />
+                <Message from={messages[2].from} subject={messages[2].subject} messageBody={messages[1].messageBody} />
             </>
         )
     }
