@@ -3,9 +3,30 @@
     justify-content: center;
     height: 3em;
     padding: .5em;
+    opacity: 1;
+    transition: 0.3s ease;
 
     &__input {
         width: 25vw;
         margin-right: 1.5em;
     }
+
+    &--deleting {
+        display: flex;
+        justify-content: center;
+        height: 3em;
+        padding: .5em;
+        background-color: red;
+    }
+}
+
+.item__remove {
+    border-radius: 50%;
+    height: 2rem;
+    width: 2rem;
+    margin: 0 1rem;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    text-align: center;
 }

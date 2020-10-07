@@ -7,26 +7,27 @@ export class TodoItem extends React.Component {
         super(props);
 
         this.state = {
-
+            numberOfItems: 1,
+            show: true,
         }
     }
 
     render () {
-        return (
-            <>
-            <div className="item">
-                <input type="text" className="item__input"/>
-                <Toggle />
-            </div>
-             <div className="item">
-                <input type="text" className="item__input"/>
-                <Toggle />
-            </div>
-            <div className="item">
-                <input type="text" className="item__input"/>
-                <Toggle />
-            </div>
-            </>
-        )
+        if (this.state.show) {
+            return (
+                 <>
+                    <div className="item">
+                        <input type="text" className="item__input"/>
+                        <Toggle />
+                        <div onClick={this.handleItemDisplay} className="item__remove">-</div>
+                    </div>
+                </>
+            )
+        } else {return null;}
+    }
+
+    handleItemDisplay = (e) => {
+        this.setState({show: false});
     }
 }
+
