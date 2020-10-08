@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     $cars_i_want = [];
     
     $cars_i_want[] = 'Aston Martin';
@@ -60,6 +60,9 @@
   
     
 </body>
-</html>
+</html> -->
 
 
+<?php 
+phpinfo()
+?>
