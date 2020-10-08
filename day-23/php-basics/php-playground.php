@@ -29,3 +29,9 @@ echo greet('Darth Wader');
 
 
 ?>
+
+<h1>First name: <?php echo $first_name ?></h1>
+
+<!-- could be done shorter -->
+
+<h2>Last name: <?= $surname; ?></h2>
