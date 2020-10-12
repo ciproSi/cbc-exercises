@@ -67,4 +67,8 @@ if ($age < 18) {
 }
 
 
+$test = 0;
 
+if ('a') {
+    echo 'a is true';
+}

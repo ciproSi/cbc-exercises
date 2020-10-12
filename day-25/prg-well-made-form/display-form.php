@@ -1,7 +1,19 @@
 <?php
+    
+    //you always need to start it if you need to work with that
+    session_start();
+
     //require libraries for "DB" access and manipulating data
     require_once './DBBlackbox.php';
+    require_once 'functions.php';
     
+    
+    //get the flashed msgs
+    $messages = getFlashedMessages();
+    
+    //get flashed data (they are there in case the validation process failed)
+    $flashed_data = getFlashedData();
+
     //is this creation or editing?
     if (isset($_GET['puppy_id'])) {
         //this is updating puppy
@@ -39,17 +51,23 @@
 <body>
     <nav>
         <a href="display-form.php">Create a new puppy</a>
+        <a href="list-puppies.php">List all the puppies</a>
     </nav>
+    
+    <!-- echo flashed msgs -->
+    <?php foreach ($messages as $msg) : ?>
+        <h3><?= $msg ?></h3>    
+    <?php endforeach;  ?>
     
     <form action="handle-form.php<?= $query_string ?>" method="POST">
         <label for="">
             Puppy name: <br>
-            <input type="text" name="name" value="<?= $puppy['name'] ?>">
+            <input type="text" name="name" value="<?= old('name', $puppy['name']) ?>">
         </label>
         <br><br>
         <label for="">
             Breed: <br>
-            <input type="text" name="breed" value="<?= $puppy['breed'] ?>">
+            <input type="text" name="breed" value="<?= old('breed', $puppy['breed']) ?>">
         </label>
         <br><br>
         <label for="">
