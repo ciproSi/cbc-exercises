@@ -1,0 +1,27 @@
+.square {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square > img {
+    width: 24px;
+    height: 24px;
+}
+
+.black {
+    background-color: rgb(80, 80, 80);
+}
+.white {
+    background-color:  rgb(175, 174, 174);
+}
+
+.board {
+    margin: 0 auto;
+    width: 384px;
+    height: 384px;
+    position: relative;
+}
