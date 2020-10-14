@@ -74,26 +74,49 @@ connect('127.0.0.1', 'world', 'root', '');
 
 // var_dump(select($query, ['Andorra']));
 
+// $query = "
+//     SELECT *  
+//     FROM `countries`
+//     WHERE `head_of_state` = ?
+// ";
+
+// var_dump(select($query, ['Mr. Trumputa']));
+
+// $query = "
+//     UPDATE `countries`
+//     SET `head_of_state` = ?
+//     WHERE `head_of_state` = ?
+// ";
+
+// update($query, ['Mr. Trumpeta', 'Mr. Trumputa']);
+
+// $query = "
+//     SELECT *  
+//     FROM `countries`
+//     WHERE `head_of_state` = ?
+// ";
+
+// var_dump(select($query, ['Mr. Trumpeta']));
+
 $query = "
-    SELECT *  
+    SELECT *
     FROM `countries`
-    WHERE `head_of_state` = ?
+    WHERE `name` = ?
 ";
-
-var_dump(select($query, ['Mr. Trumputa']));
+var_dump(select($query, ['United States Minor Outlying Islands']));
 
 $query = "
-    UPDATE `countries`
-    SET `head_of_state` = ?
-    WHERE `head_of_state` = ?
+ UPDATE `countries`
+ SET
+ `population` = ?,
+ `GNP` = ?
 ";
 
-update($query, ['Mr. Trumpeta', 'Mr. Trumputa']);
+update($query, [300, 13.91]);
 
 $query = "
-    SELECT *  
+    SELECT *
     FROM `countries`
-    WHERE `head_of_state` = ?
+    WHERE `name` = ?
 ";
-
-var_dump(select($query, ['Mr. Trumpeta']));
+var_dump(select($query, ['United States Minor Outlying Islands']));

@@ -26,8 +26,8 @@ connect('127.0.0.1', 'world', 'root', '');
 
 require_once 'Region.php';
 
-$region = new Region('Krkonoše');
-$region->insert();
+// $region = new Region('Krkonoše');
+// $region->insert();
 
 $query = "
     SELECT *
@@ -35,3 +35,31 @@ $query = "
 ";
 
 var_dump(select($query));
+
+
+
+
+// $region = select_one("SELECT * FROM `regions` WHERE `id` = ?", [10], 'Region');
+// var_dump($region);
+// $region->name = 'Middle America';
+// $region->save();
+
+// var_dump(select($query));
+
+// $region->delete();
+
+
+// $query = "
+//     DELETE
+//     FROM `regions`
+//     WHERE `slug` LIKE '%america%'
+// ";
+
+// delete($query);
+
+// $query = "
+//     SELECT *
+//     FROM `regions`
+// ";
+
+// var_dump(select($query));
