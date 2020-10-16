@@ -1,0 +1,12 @@
+{
+    "name": "simon/composer-project",
+    "authors": [
+        {
+            "name": "Šimon Cipro",
+            "email": "simon.cipro@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}

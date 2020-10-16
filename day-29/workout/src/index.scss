@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: 400;
+}
+
+.games {
+  width: 80vw;
+  margin: 0 auto;
+
+  ol {
+    list-style: none;
+    counter-reset: my-counter;
+    padding: 0;
+  }
+
+  ol li {
+    counter-increment: my-counter;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    
+    &:nth-of-type(2n+1) {
+      background-color: rgb(179, 183, 187);
+    }
+
+  }
+  ol li::before {
+    content: "0" counter(my-counter);
+    color:red;
+    font-size: 2em;
+    margin: auto 0;
+  }
+}
+
+.game {
+  padding: 1em;
+  
+  h3 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+
+  h4 {
+    margin: .2em 0 .5em 0;
+  }
+    
+  &__detail {
+    display: flex;
+    
+    p {
+      margin: 0;
+      padding: 0 2em;
+      font-weight: 300;
+    }
+  }
+}
+

@@ -1,0 +1,5 @@
+
+
+PATH(s) environment variable
+on MAC
+/etc/paths
