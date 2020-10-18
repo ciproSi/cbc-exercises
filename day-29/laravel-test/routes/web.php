@@ -18,5 +18,7 @@ Route::get('/', function () {
 });
 
 //kdyz nekdo prijden a domena/api, tak to spusti metodu index() tridy ApiController, ktera je na ceste App\Http\Controllers\
-Route::get('/api', 'App\Http\Controllers\ApiController@index');
+Route::get('/api', 'ApiController@index');
+
+Route::get('/api/project-info', 'ApiController@projectInfo');
 

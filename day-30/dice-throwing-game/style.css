@@ -1,0 +1,14 @@
+.result-row {
+    display: flex;
+    padding-top: 2em;
+    
+}
+
+.result {
+    border:  1px solid black;
+    font-size: 2em;
+    width: 1em;
+    text-align: center;
+    margin-right: .5em ;
+
+}
