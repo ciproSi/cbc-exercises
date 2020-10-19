@@ -21,3 +21,7 @@ Route::get('/', function () {
 
 Route::get('/api/books', 'APIBookController@index');
 Route::get('/books', 'TestController@index');
+Route::get('/books/test', 'BookController@index');
+Route::get('/publishers', 'PublisherController@index');
+Route::get('/publishers/{id}', 'PublisherController@show');
+

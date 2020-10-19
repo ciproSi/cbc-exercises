@@ -12,6 +12,8 @@ class TestController extends Controller
         // how to pass a value to view (use method with)
         $user = 'simon';
         $name = 'Simon Cipro';
+        $description = '<p> This is <strong>my</strong> description </p>';
+        $age = 82;
         
         // bad way how to put the html
         // return '<h1>Ahoj</h1>';
@@ -36,7 +38,7 @@ class TestController extends Controller
 
         // or even shorter if we use/want to use the same variable names in view as in the controller
         // we use function compact
-        return view('test/test', compact('user', 'name'));
+        return view('test/test', compact('user', 'name', 'description', 'age'));
 
         //the compact is actualy doing in this case:
             // 'name' => $name,

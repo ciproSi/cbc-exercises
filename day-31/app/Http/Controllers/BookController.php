@@ -1,14 +1,15 @@
 <?php
- 
+
 namespace App\Http\Controllers;
- 
+
 use Illuminate\Http\Request;
- 
-class APIBookController extends Controller
+
+class BookController extends Controller
 {
-    public function index()
+    public function index ()
     {
-        $page_nr = $_GET['page'] ?? 1;
+
+       $page_nr = $_GET['page'] ?? 1;
 
 
         $query = '
@@ -19,6 +20,6 @@ class APIBookController extends Controller
         ';
         $books = \DB::select($query);
         
-        return view('/books/index', compact('books'));
+        return $books;
     }
 }
