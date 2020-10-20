@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
+use App\Models\Category;
+use App\Models\Subcategory;
 
 class EshopController extends Controller
 {
@@ -70,17 +73,21 @@ class EshopController extends Controller
     
     public function subcategoryIndex($subcat_id)
     {
-        //getting name of that subcat (value is returning just value of given column)
-        $subcat_name = \DB::table('subcategories')->where('id', $subcat_id)->value('name');
+        //getting name of that subcat (value is returning just value of given column), first by fluent query then by eloquent ORM
+        // $subcat_name = \DB::table('subcategories')->where('id', $subcat_id)->value('name');
 
-        //getting books of that subcat
-        $books = \DB::table('books')->where('subcategory_id', $subcat_id)->get();
+        $subcat = Subcategory::findOrFail($subcat_id);
 
-        // getting the category name
-        $category_id = \DB::table('subcategories')->where('id', $subcat_id)->value('category_id');
-        $category = \DB::table('categories')->where('id', $category_id)->first();
-        
-        return view('/eshop/subcategory', compact('books', 'subcat_name', 'category'));
+        //getting books of that subcat, first by fluent query then by eloquent ORM
+        // $books = \DB::table('books')->where('subcategory_id', $subcat_id)->get();
+        $books = Book::where('subcategory_id', $subcat_id)->get();
+
+        // getting the category name, first by fluent query then by eloquent ORM
+        // $category_id = \DB::table('subcategories')->where('id', $subcat_id)->value('category_id');
+        // $category = \DB::table('categories')->where('id', $category_id)->first();
+        $category = Category::find($subcat->category_id);
+
+        return view('/eshop/subcategory', compact('books', 'subcat', 'category'));
 
     }
 }
