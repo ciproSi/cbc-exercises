@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\APIBookController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\BookshopController;
 use App\Http\Controllers\CategoryController;
+use Illuminate\Contracts\Cache\Store;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +24,6 @@ Route::get('/', function () {
 
 
 Route::get('/api/books', 'APIBookController@index');
-Route::get('/books/test', 'BookController@index');
 Route::get('/publishers', 'PublisherController@index');
 Route::get('/publishers/{id}', 'PublisherController@show');
 
@@ -36,5 +37,10 @@ Route::get('/categories/create', 'CategoryController@create');
 // method store safe it to the db
 Route::post('/categories', 'CategoryController@store');
 
-Route::get('/books/create', 'BookController@create');
-Route::post('/books', 'BookController@store');
+Route::get('/book/create', 'BookController@create');
+Route::post('/book', 'BookController@store');
+Route::get('/book', 'BookController@index');
+
+Route::get('/bookshop/create', 'BookshopController@create');
+Route::post('bookshop', 'BookshopController@store');
+Route::get('/bookshop', 'BookshopController@index');

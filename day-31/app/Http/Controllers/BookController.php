@@ -11,19 +11,11 @@ class BookController extends Controller
 {
     public function index ()
     {
-
-       $page_nr = $_GET['page'] ?? 1;
-
-
-        $query = '
-            SELECT *
-            FROM `books`
-            WHERE 1
-            LIMIT ' . ($page_nr - 1) * 4 . ', 4
-        ';
-        $books = \DB::select($query);
         
-        return $books;
+        $books = Book::all();
+        
+        return view('/books/index', compact('books'));
+       
     }
 
     public function create ()
@@ -45,9 +37,9 @@ class BookController extends Controller
             $book->authors = $authors;
             $book->image = $image;
             $book->save();
-            return view('books/success');
+            return redirect(action('BookController@index'))->with('flash_message', 'Saved Correctly!');
         } else {
-            return 'Book is already in our DB.';
+            return redirect(action('BookController@index'))->with('flash_message', 'Book is already in the DB!');
         }
 
         
