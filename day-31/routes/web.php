@@ -40,6 +40,7 @@ Route::post('/categories', 'CategoryController@store');
 Route::get('/book/create', 'BookController@create');
 Route::post('/book', 'BookController@store');
 Route::get('/book', 'BookController@index');
+Route::get('/book/{ id }', 'BookController@show');
 
 Route::get('/bookshop/create', 'BookshopController@create');
 Route::post('bookshop', 'BookshopController@store');

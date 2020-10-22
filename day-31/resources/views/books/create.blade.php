@@ -11,18 +11,17 @@
    <div class="container">
         <form action="{{ action('BookController@store') }}" method="POST" >
             @csrf
-            <label for="title">Title <br>
-                <input type="text" name="title">
-            </label>
-            <br>
-            <label for="authors">Authors <br>
+            @component('components.form-group', ['label' => 'Title:'])
+                <input type="text" name="title">    
+            @endcomponent
+            
+            @component('components.form-group', ['label' => 'Authors:'])
                 <input type="text" name="authors">
-            </label>
-            <br>
-            <label for="image">Image URL <br>
+            @endcomponent
+
+            @component('components.form-group', ['label' => 'Image URL'])
                 <input type="text" name="image">
-            </label>
-            <br>
+            @endcomponent
             <button class="btn btn-success">Safe book</button>
         </form>
    </div>

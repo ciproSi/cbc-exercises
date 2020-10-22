@@ -4,14 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Rating;
+use App\Models\Book;
 
-class Book extends Model
+class Rating extends Model
 {
     use HasFactory;
 
-    public function ratings ()
+    public function book ()
     {
-        return $this->hasMany(Rating::class);
+        return $this->belongsTo(Book::class);
     }
 }
