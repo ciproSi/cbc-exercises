@@ -1,4 +1,4 @@
-    @extends('layouts/main')
+    @extends('layouts/main', ['title' => 'Index of Books'])
 
     @section('content')
         <h1>Index of the books</h1>
@@ -18,7 +18,6 @@
                     <th scope="col">ID#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Authors</th>
-                    <th scope="col">Ratings</th>
                     <th scope="col">Cover image</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
@@ -30,14 +29,9 @@
                         <th scope="row">{{ $book->id }}</td>
                         <td>{{ $book->title }}</td>
                         <td>{{ $book->authors }}</td>
-                        <td>
-                            @foreach ($book->ratings as $rating)
-                                {{ $rating->value }},    
-                            @endforeach
-                        </td>
                         <td><img class="img-thumbnail" src="{{ $book->image }}" alt=""></td>
-                        <td><a href="book/{{ $book->id }}" class="btn btn-info">Detail</a></td>
-                        <td><button class="btn btn-info">Update</button></td>
+                        <td><a href="book/{{ $book->id }}" class="btn btn-secondary">Detail</a></td>
+                        <td><a href="/book/edit/{{ $book->id }}" class="btn btn-info">Edit</a></td>
                         <td><button class="btn btn-danger">Delete</button></td>
 
                     </tr>
