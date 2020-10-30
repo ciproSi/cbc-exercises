@@ -24,6 +24,14 @@ class AuthServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->registerPolicies();
+        Gate::define('admin', function($user) {
+            // any kind of logic which specifies who pass this gate - named here admin
+            
+            // this gate is passed only by user whose email is simon.cipro@gmail.com
+            //this function should return boolean
+            return $user->is_admin;
+
+        });
 
         //
     }

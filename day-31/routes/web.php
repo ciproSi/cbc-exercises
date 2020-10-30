@@ -22,6 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//home
+Route::get('/home', 'HomeController@index')->middleware('auth')->name('home');
 
 Route::get('/api/books', 'APIBookController@index');
 Route::get('/publishers', 'PublisherController@index');

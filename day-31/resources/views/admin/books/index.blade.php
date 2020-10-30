@@ -29,7 +29,7 @@
                         <td>{{ $book->title }}</td>
                         <td>{{ $book->authors }}</td>
                         {{-- <td><img class="img-thumbnail" src="{{ $book->image }}" alt=""></td> --}}
-                        <td><a href="book/{{ $book->id }}" class="btn btn-secondary">Detail</a></td>
+                        <td><a href="{{ route('admin.books.show', $book->id) }}" class="btn btn-secondary">Detail</a></td>
                         <td><a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-info">Edit</a></td>
                         <td>@include('common.delete-book')</td>
 

@@ -51,7 +51,10 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        $book = Book::with('ratings')->findOrFail($id);
+
+        return view('admin.books.show', compact('book'));
+
     }
 
     /**
@@ -96,13 +99,21 @@ class BookController extends Controller
             'genre.required' => 'At least one genre needs to be defined.' 
         ]);
 
-        
+         //cover upload
+       
         
 
         $book = Book::findOrFail($book_id);
         $book->title = $request->input('title');
         $book->authors = $request->input('authors');
-        $book->image = $request->input('image');
+        // $book->image = $request->input('image');
+        
+        if ($file = $request->file('cover')) {
+            $db_file_name = $file->store('covers', 'uploads');
+            $prefix = '/uploads';
+            $book->image = $prefix . '/' . $db_file_name;
+        }
+
         $book->save();
         
         //get the array of genre's id 

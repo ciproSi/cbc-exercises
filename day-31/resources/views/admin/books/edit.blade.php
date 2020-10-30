@@ -6,7 +6,7 @@
 
     @include('common.errors')
 
-    <form action="{{ route('admin.books.update', $book->id) }}" method="POST" >
+    <form action="{{ route('admin.books.update', $book->id) }}" method="POST" enctype="multipart/form-data">
         @method('PUT')
         @csrf
         @component('components.form-group', ['label' => 'Title:'])
@@ -30,6 +30,9 @@
                     {{ $genre->name }}
                 </label>
             @endforeach
+        </div>
+        <div class="form-group">
+            <input type="file" name="cover">
         </div>
         <button class="btn btn-success">Save</button>
     </form>
