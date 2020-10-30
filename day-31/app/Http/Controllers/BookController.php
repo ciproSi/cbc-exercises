@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Rating;
 use App\Models\Category;
 use App\Models\Subcategory;
 use Symfony\Contracts\Service\Attribute\Required;
@@ -78,7 +79,36 @@ class BookController extends Controller
         $book->image = $request->input('image');
         $book->save();
         
-        return redirect(action('BookController@index'))->with('flash_message', 'Book updated');
+        return redirect(action('BookController@show', ['id' => $book_id]))->with('flash_message', 'Book updated');
     
     }
+
+    public function destroy ($book_id)
+    {
+        $book = Book::findOrFail($book_id);
+        $book->delete();
+
+        return redirect(action('BookController@index'))->with('flash_message', 'Book deleted');
+    }
+
+    public function storeReview (Request $request, $book_id)
+    {
+        $this->validate($request, [
+            'review' => 'required|string|max:255',
+            'rating' => 'required|numeric|gte:0|lte:100',
+            'review_author' => 'required'
+        ]);
+
+        $rating = new Rating;
+        $rating->review = $request->input('review');
+        $rating->value = $request->input('rating');
+        $rating->review_author = $request->input('review_author');
+        $rating->book_id = $book_id;
+        $rating->save();
+
+        return redirect('book/' . $book_id)->with('flash_message', 'Review added');
+
+    }
+
+    
 }

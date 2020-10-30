@@ -31,11 +31,20 @@ Route::get('/eshop', 'EshopController@index');
 Route::get('/eshop/category/{id}', 'EshopController@categoryIndex');
 Route::get('/eshop/subcategory/{id}', 'EshopController@subcategoryIndex');
 
+//categories
 Route::get('/categories', 'CategoryController@index');
-// method create shows the form by convention
+Route::get('/categories/show/{id}', 'CategoryController@show');
+Route::get('/categories/edit/{id}', 'CategoryController@edit');
+Route::put('/category/{id}', 'CategoryController@update');
 Route::get('/categories/create', 'CategoryController@create');
-// method store safe it to the db
 Route::post('/categories', 'CategoryController@store');
+Route::delete('/categories/{id}', 'CategoryController@destroy');
+
+// subcategories
+Route::resource('subcategories', SubcategoryController::class);
+
+//orders
+Route::post('/orders', 'OrderController@store');
 
 Route::get('/book/create', 'BookController@create');
 Route::post('/book', 'BookController@store');
@@ -43,6 +52,8 @@ Route::get('/book/{id}', 'BookController@show');
 Route::get('/book', 'BookController@index');
 Route::get('/book/edit/{id}', 'BookController@edit');
 Route::put('book/{id}', 'BookController@update');
+Route::post('/book/{id}/review', 'BookController@storeReview');
+Route::delete('/book/{id}', 'BookController@destroy');
 
 Route::get('/bookshop/create', 'BookshopController@create');
 Route::post('bookshop', 'BookshopController@store');

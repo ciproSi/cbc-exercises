@@ -1,4 +1,4 @@
-    @extends('layouts/main', ['title' => 'Index of Books'])
+@extends('layouts.main-admin', ['title' => 'Index of Books'])
 
     @section('content')
         <h1>Index of the books</h1>
@@ -11,13 +11,13 @@
         @endif
         
         {{-- table with books and methods to handle them --}}
-        <table class="table-striped">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th scope="col">ID#</th>
                     <th scope="col">Name</th>
                     <th scope="col">Authors</th>
-                    <th scope="col">Cover image</th>
+                    {{-- <th scope="col">Cover image</th> --}}
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
@@ -28,9 +28,9 @@
                         <th scope="row">{{ $book->id }}</td>
                         <td>{{ $book->title }}</td>
                         <td>{{ $book->authors }}</td>
-                        <td><img class="img-thumbnail" src="{{ $book->image }}" alt=""></td>
+                        {{-- <td><img class="img-thumbnail" src="{{ $book->image }}" alt=""></td> --}}
                         <td><a href="book/{{ $book->id }}" class="btn btn-secondary">Detail</a></td>
-                        <td><a href="/book/edit/{{ $book->id }}" class="btn btn-info">Edit</a></td>
+                        <td><a href="{{ route('admin.books.edit', $book->id) }}" class="btn btn-info">Edit</a></td>
                         <td>@include('common.delete-book')</td>
 
                     </tr>

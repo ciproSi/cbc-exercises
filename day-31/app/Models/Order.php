@@ -4,15 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Category;
-class Subcategory extends Model
+use App\Models\Book;
+
+class Order extends Model
 {
     use HasFactory;
 
-    
-
-    public function category()
+    public function books()
     {
-        return $this->belongsTo(Category::class);
+        return $this->belongsToMany(Book::class);
     }
 }

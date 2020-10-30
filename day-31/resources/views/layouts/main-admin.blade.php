@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>{{ $title ?? 'Laravel book project' }}</title>
+    <title>{{ $title ?? 'Laravel eshop page' }}</title>
 </head>
 <body>
     <div class="container">
 
-        @include('common.navigation')
-        
+        @include('common.admin-navigation')
+
         @yield('content')
-    
+        
     </div>
+
+    <script src="{{ mix('js/app.js') }}"></script>
 </body>
 </html>
